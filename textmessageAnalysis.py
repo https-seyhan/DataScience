@@ -39,4 +39,15 @@ with pm.Model() as model:
     tau = pm.DiscreteUniform("tau", lower=0, upper=size)
     print("Random output:", tau.random(), tau.random(), tau.random())
 
-@pm.deterministic
+#@pm.deterministic
+
+def lambda_ (tau=tau, lambda_1 = lambda_1, lambda_2 = lambda_2):
+    out = np.zeros(size)
+    out[:tau] = lambda_1
+    out[tau:] = lambda_2
+    
+    return out
+
+observation = pm.Poisson("obs", lambda_, lambda_value = textfile, observed=True)
+
+model = pm.Model(observation, lambda_1, lambda_2, tau)
