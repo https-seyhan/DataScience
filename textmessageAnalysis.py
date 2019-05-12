@@ -38,16 +38,21 @@ with pm.Model() as model:
     print(lambda_1)
     tau = pm.DiscreteUniform("tau", lower=0, upper=size)
     print("Random output:", tau.random(), tau.random(), tau.random())
-
-#@pm.deterministic
-
-def lambda_ (tau=tau, lambda_1 = lambda_1, lambda_2 = lambda_2):
-    out = np.zeros(size)
-    out[:tau] = lambda_1
-    out[tau:] = lambda_2
     
-    return out
 
-observation = pm.Poisson("obs", lambda_, lambda_value = textfile, observed=True)
+n_data_points = size   
+idx = np.arange(n_data_points)
+with model:
+    lambda_ = pm.math.switch(tau >= idx, lambda_1, lambda_2)            
 
-model = pm.Model(observation, lambda_1, lambda_2, tau)
+#pm.Poisson("obs", lambda_, value = textfile, observed=True)
+
+with model:
+    obs = pm.Poisson("obs", lambda_, observed=textfile)
+print(obs.tag.test_value)
+
+model = pm.Model([obs, lambda_1, lambda_2, tau])
+print(model)
+
+mcmc = pm.MCMC(model)
+mcmc.sample(40000, 10000)
