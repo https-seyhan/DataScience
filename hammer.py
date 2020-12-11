@@ -27,19 +27,15 @@ alpha = 1 / size
 alpha = 1.0 / textfile.mean()
 
 
-
 with pm.Model() as model:
     lambda_1 = pm.Exponential('lambda_1', alpha)
     lambda_2 = pm.Exponential('lambda_2', alpha)
     tau = pm.DiscreteUniform("tau", lower=0, upper=size)
 
-
-
 with pm.Model():
     x = pm.Normal('x', mu=0, sd=1)
     plus_2 = pm.Deterministic('x plus 2', x + 2)
     print("X: ", plus_2)
-
 
 def lambda_ (tau=tau, lambda_1 = lambda_1, lambda_2 = lambda_2):
     out = np.zeros(size)
