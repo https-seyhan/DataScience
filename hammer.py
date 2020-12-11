@@ -9,7 +9,7 @@ import os
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
-import pymc3 as pm
+import pymc3 as pm # PyMC3 is a Python package for Bayesian statistical modeling 
 
 
 os.chdir("/home/saul/pythonWork")
