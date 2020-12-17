@@ -8,8 +8,6 @@ os.chdir("/home/saul/")
 
 def sieve(N):
 	
-	#print ("Current working directory %s" % retval)
-	
 	#print(N)
 	#N = 100
 	is_prime = (N + 1) * [True]
