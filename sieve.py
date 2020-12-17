@@ -2,11 +2,13 @@ from math import sqrt
 import csv
 import os
 
+os.chdir("/home/saul/")
+
 def sieve(N):
 	# Check current working directory.
 	#retval = os.getcwd()
 	#print ("Current working directory %s" % retval)
-	os.chdir("/home/saul/")
+	
 	#print(N)
 	#N = 100
 	is_prime = (N + 1) * [True]
