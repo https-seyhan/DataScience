@@ -16,7 +16,6 @@ def sieve(N):
 	for candidate in range(2, int(sqrt(N)) + 1):
 		#print(N, " ",int(sqrt(N)))
 		if is_prime[candidate]:
-            
 		   for witness in range(candidate * candidate, N + 1, candidate):
                is_prime[witness] = False
 	return is_prime[N]
