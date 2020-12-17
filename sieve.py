@@ -8,7 +8,7 @@ os.chdir("/home/saul/")
 
 def sieve(N):
 	# Check current working directory.
-	#retval = os.getcwd()
+	
 	#print ("Current working directory %s" % retval)
 	
 	#print(N)
