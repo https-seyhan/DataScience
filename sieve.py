@@ -24,7 +24,6 @@ def sieve(N):
 if __name__ == '__main__':
     primeNumbers = []
 	#main()
-	#print('******')w
 	#writer = csv.writer(open("sieve.csv", 'w'))
 	for candidate in range(10, 100):
 		if sieve(candidate):
