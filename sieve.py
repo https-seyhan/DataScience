@@ -7,7 +7,6 @@ os.chdir("/home/saul/")
 # finding all prime numbers up to any given limit
 
 def sieve(N):
-	# Check current working directory.
 	
 	#print ("Current working directory %s" % retval)
 	
