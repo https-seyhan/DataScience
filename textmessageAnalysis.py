@@ -8,7 +8,7 @@ import os
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
-import pymc3 as pm
+import pymc3 as pm # PyMC3 is a Python package for Bayesian statistical modeling and probabilistic machine learning which focuses on advanced Markov chain Monte Carlo and variational fitting algorithms
 
 
 os.chdir("/home/saul/pythonWork")
