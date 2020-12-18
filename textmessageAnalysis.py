@@ -30,7 +30,6 @@ plt.title("Did the user's texting habit change over time?")
 plt.xlim(0, size)
 
 with pm.Model() as model:
-    
     lambda_1 = pm.Exponential('lambda_1', alpha) # create stochastic variable
     lambda_2 = pm.Exponential('lambda_2', alpha) #create stochastic variable
     print(lambda_1)
