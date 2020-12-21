@@ -23,6 +23,7 @@ size = len(textfile)
 print(size)
 alpha = 1 / textfile.mean()
 
+# plot bar graph
 plt.bar(np.arange(size), textfile, color="#348ABD")
 plt.xlabel("Time (days)")
 plt.ylabel("Text message received")
