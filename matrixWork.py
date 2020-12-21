@@ -1,3 +1,4 @@
+# Example of matrix calculation
 from numpy import matrix
 from numpy import linalg
 
