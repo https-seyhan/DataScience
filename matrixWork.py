@@ -1,6 +1,6 @@
 # Example of matrix calculation
 from numpy import matrix
-from numpy import linalg
+from numpy import linalg # The Linear Algebra module of NumPy offers various methods to apply linear algebra on any numpy array
 
 def createMatrix():
 	A = matrix([[1,2,3], [11,12,13], [21, 22,23]])
