@@ -1,5 +1,5 @@
 # Example of matrix calculation
-from numpy import matrix
+from numpy import matrix # Returns a matrix from an array-like object, or from a string of data
 from numpy import linalg # The Linear Algebra module of NumPy offers various methods to apply linear algebra on any numpy array
 
 def createMatrix():
