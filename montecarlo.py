@@ -23,7 +23,6 @@ def simple_bettor(funds, initial_wager, wager_count):
 
 	wX = []
 	vY = []
-
 	
 	current_Wager = 1
 
