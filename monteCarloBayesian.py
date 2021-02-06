@@ -18,7 +18,6 @@ os.chdir("/home/saul/pythonWork")
 textfile = np.loadtxt("txtdata.csv")
 
 #print(textfile.describe())
-
 #@pm.deterministic
 
 size = len(textfile)
