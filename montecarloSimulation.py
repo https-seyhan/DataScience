@@ -43,7 +43,6 @@ def simple_bettor(funds, initial_wager, wager_count):
 	elif value == 0:
 		value = 'Equal'
 	
-
 	plt.plot(wX, vY) #Plot data
 
 x = 0
