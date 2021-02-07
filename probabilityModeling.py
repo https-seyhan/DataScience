@@ -5,7 +5,7 @@ from matplotlib import  pyplot as plt
 class probabilityModel:
     randomVariable = []
     def __init__(self):
-        print("Constructor Called!!")
+        
 
         randomVariable = np.random.rand(100)
         #randomVariable = random()
