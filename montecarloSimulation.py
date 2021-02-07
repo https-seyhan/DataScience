@@ -12,7 +12,7 @@ def rollDice():
 		#'roll was 1-50'
 		return False
 	elif 100 > roll > 50:
-		#roll, 'roll was 51-99. You win'
+		#'roll was 51-99. You win'
 		return True
 
 def simple_bettor(funds, initial_wager, wager_count):
