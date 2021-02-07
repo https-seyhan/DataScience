@@ -20,6 +20,5 @@ def calculateMatrix(A,x,y):
 	print ('Solve Linear Equation of A an X :', linalg.solve(A, x))
 	print(A[2,1])
 
-
 if __name__ == '__main__':
 	createMatrix()
