@@ -2,7 +2,7 @@ from random import *
 import numpy as np
 from matplotlib import  pyplot as plt
 
-print("Start")
+
 
 class probabilityModel:
     randomVariable = []
