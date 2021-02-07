@@ -30,8 +30,7 @@ def simple_bettor(funds, initial_wager, wager_count):
 		else:
 			value -= wager
 			wX.append(current_Wager)
-			vY.append(value)
-		
+			vY.append(value)	
 		current_Wager +=1
 
 	if value < 0:
