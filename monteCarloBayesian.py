@@ -22,7 +22,6 @@ print(size)
 #alpha = 1 / size
 alpha = 1.0 / textfile.mean()
 
-
 with pm.Model() as model:
     lambda_1 = pm.Exponential('lambda_1', alpha) # lambda in poisson distribution
     lambda_2 = pm.Exponential('lambda_2', alpha)
