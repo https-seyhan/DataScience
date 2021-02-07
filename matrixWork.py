@@ -21,6 +21,5 @@ def calculateMatrix(A,x,y):
 	print(A[2,1])
 
 
-
 if __name__ == '__main__':
 	createMatrix()
