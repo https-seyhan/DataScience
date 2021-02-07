@@ -1,7 +1,6 @@
 from math import sqrt
 import csv
 import os
-
 os.chdir("/home/saul/")
 
 # finding all prime numbers up to any given limit
