@@ -13,7 +13,7 @@ class probabilityModel:
         print("Generate Model")
 
     def __plotProbs(self, randomVal):
-        print(randomVal)
+        
 
         fig, (ax1, ax2) = plt.subplots(1, 2)
         print("Max value ", max(randomVal))
