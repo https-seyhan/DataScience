@@ -19,8 +19,7 @@ def simple_bettor(funds, initial_wager, wager_count):
 	value = funds
 	wager = initial_wager
 	wX = []
-	vY = []
-	
+	vY = []	
 	current_Wager = 1
 
 	while current_Wager < wager_count:
