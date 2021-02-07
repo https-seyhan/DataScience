@@ -10,7 +10,7 @@ class probabilityModel:
         randomVariable = np.random.rand(100)
         #randomVariable = random()
         self.__plotProbs(randomVariable)
-        #print("random Variable", randomVariable)
+        
 
     def generateModel(self):
         print("Generate Model")
