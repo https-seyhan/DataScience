@@ -9,7 +9,7 @@ def rollDice():
 		#roll, 'roll was 100'
 		return False
 	elif roll <= 50:
-		#print roll, 'roll was 1-50'
+		#roll, 'roll was 1-50'
 		return False
 	elif 100 > roll > 50:
 		#print roll, 'roll was 51-99. You win'
