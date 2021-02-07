@@ -6,7 +6,6 @@ class probabilityModel:
     randomVariable = []
     def __init__(self):
         
-
         randomVariable = np.random.rand(100)
         #randomVariable = random()
         self.__plotProbs(randomVariable)
