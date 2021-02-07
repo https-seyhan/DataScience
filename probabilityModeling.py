@@ -9,7 +9,6 @@ class probabilityModel:
         #randomVariable = random()
         self.__plotProbs(randomVariable)
         
-
     def generateModel(self):
         print("Generate Model")
 
