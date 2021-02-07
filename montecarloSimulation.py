@@ -3,7 +3,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 #This is an example of MC simulation
-
 def rollDice():
 	roll = random.randint(1,100)
 	if roll == 100:
