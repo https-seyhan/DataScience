@@ -19,7 +19,6 @@ if __name__ == '__main__':
 	#writer = csv.writer(open("sieve.csv", 'w'))
 	for candidate in range(10, 100):
 		if sieve(candidate):
-	
 			print(candidate)
 			#writer.writerow([candidate])
             
