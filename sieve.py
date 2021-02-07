@@ -6,7 +6,7 @@ os.chdir("/home/saul/")
 # finding all prime numbers up to any given limit
 def sieve(N):
 	is_prime = (N + 1) * [True]
-
+	
 	for candidate in range(2, int(sqrt(N)) + 1):
 		#print(N, " ",int(sqrt(N)))
 		if is_prime[candidate]:
