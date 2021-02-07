@@ -17,7 +17,6 @@ os.chdir("/home/saul/pythonWork")
 textfile = np.loadtxt("txtdata.csv")
 
 #print(textfile.describe())
-
 size = len(textfile)
 print(size)
 alpha = 1 / textfile.mean()
