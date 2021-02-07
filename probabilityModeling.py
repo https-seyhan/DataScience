@@ -2,8 +2,6 @@ from random import *
 import numpy as np
 from matplotlib import  pyplot as plt
 
-
-
 class probabilityModel:
     randomVariable = []
     def __init__(self):
