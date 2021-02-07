@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 def rollDice():
 	roll = random.randint(1,100)
 	if roll == 100:
-		#print roll, 'roll was 100'
+		#roll, 'roll was 100'
 		return False
 	elif roll <= 50:
 		#print roll, 'roll was 1-50'
