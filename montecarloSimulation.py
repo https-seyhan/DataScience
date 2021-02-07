@@ -34,7 +34,6 @@ def simple_bettor(funds, initial_wager, wager_count):
 			value -= wager
 			wX.append(current_Wager)
 			vY.append(value)
-
 		
 		current_Wager +=1
 
