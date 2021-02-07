@@ -18,7 +18,6 @@ def rollDice():
 def simple_bettor(funds, initial_wager, wager_count):
 	value = funds
 	wager = initial_wager
-
 	wX = []
 	vY = []
 	
