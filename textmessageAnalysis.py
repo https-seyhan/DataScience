@@ -32,7 +32,7 @@ plt.xlim(0, size)
 with pm.Model() as model:
     lambda_1 = pm.Exponential('lambda_1', alpha) # create stochastic variable
     lambda_2 = pm.Exponential('lambda_2', alpha) #create stochastic variable
-    print(lambda_1)
+  
     tau = pm.DiscreteUniform("tau", lower=0, upper=size) # tau has Uniform distribution
     print("Random output:", tau.random(), tau.random(), tau.random())
     
