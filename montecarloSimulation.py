@@ -44,7 +44,6 @@ x = 0
 while  x < 100:
 	simple_bettor(10000,100,100000)
 	x += 1
-
 plt.ylabel('Account Value')
 plt.xlabel('Wager Count')
 plt.show()
