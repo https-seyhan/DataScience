@@ -19,4 +19,3 @@ if __name__ == '__main__':
 		if sieve(candidate):
 			print(candidate)
 			#writer.writerow([candidate])
-        
