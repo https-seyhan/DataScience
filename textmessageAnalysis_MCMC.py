@@ -9,7 +9,7 @@ import os
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
-import pymc3 as pm 
+
 
 os.chdir("/home/saul/pythonWork")
 
