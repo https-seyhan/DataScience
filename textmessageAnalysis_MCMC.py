@@ -8,6 +8,7 @@
 import os
 import pandas as pd
 import numpy as np
+import pymc3 as pm 
 from matplotlib import pyplot as plt
 
 
