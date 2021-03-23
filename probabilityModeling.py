@@ -1,5 +1,6 @@
-from random import *
 import numpy as np
+from random import *
+
 from matplotlib import  pyplot as plt
 
 class probabilityModel:
