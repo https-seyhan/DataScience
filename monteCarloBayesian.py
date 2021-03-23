@@ -6,9 +6,9 @@
 import os
 import pandas as pd
 import numpy as np
-from matplotlib import pyplot as plt
-import pymc3 as pm # PyMC3 is a Python package for Bayesian statistical modeling 
 
+import pymc3 as pm # PyMC3 is a Python package for Bayesian statistical modeling 
+from matplotlib import pyplot as plt
 os.chdir("/home/saul/pythonWork")
 #textfile = pd.read_csv("txtdata.csv", sep=",", header=None)
 textfile = np.loadtxt("txtdata.csv")
