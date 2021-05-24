@@ -39,7 +39,7 @@ def simple_bettor(funds, initial_wager, wager_count):
 		value = 'Win'
 	elif value == 0:
 		value = 'Equal'
-	
+
 	plt.plot(wX, vY) # plot the distribution of data
 x = 0
 while  x < 100:
