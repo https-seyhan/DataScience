@@ -17,7 +17,7 @@ def excel_work():
      #print("Type ", worksheet)
      #sheet = workbook.active
      value = worksheet["C2"].value
-  
+ 
      row_count = worksheet.max_row
      column_count = worksheet.max_column
 
