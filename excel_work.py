@@ -35,7 +35,7 @@ def excel_work():
      print("Saved")
 
      #for row in worksheet.rows:
-     #     prin
+     #     pri
 
 if __name__ == '__main__':
     #test()
