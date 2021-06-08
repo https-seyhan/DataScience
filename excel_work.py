@@ -6,7 +6,7 @@ from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 
 def test():
-    print("Test")
+    
     workbook = Workbook()
     sheet = workbook.active
 
