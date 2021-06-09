@@ -30,7 +30,7 @@ def excel_work():
      workbook.save("sample.xlsx")
 
      print("Saved")
-     #for row in wo
+     #for row in w
  
 if __name__ == '__main__':
     #test()
