@@ -1,5 +1,5 @@
 import os
-os.chdir('/home/saul/Business')
+
 
 from openpyxl import Workbook
 from openpyxl import load_workbook
