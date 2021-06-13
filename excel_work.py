@@ -14,7 +14,6 @@ def test():
     print("Test")
     workbook = Workbook()
     sheet = workbook.active
-
     sheet["A1"] = "hello"
     sheet["B1"] = "world!"
 
