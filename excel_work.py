@@ -75,7 +75,7 @@ def copy_formula():
     worksheet.insert_rows(3)
     row_shift = 3
     
-   
+  
     #new_range_start = 
     #new_range_end = 
          
