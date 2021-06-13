@@ -79,7 +79,6 @@ def copy_formula():
     worksheet["D7"] = "=AVERAGE(D9:D26)"
     workbook.save("sample_v3.xlsx")
 
-
 if __name__ == '__main__':
     #test()
     #excel_work()
