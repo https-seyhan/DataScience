@@ -67,7 +67,6 @@ def copy_formula():
     print(value)
     row_count = worksheet.max_row
     column_count = worksheet.max_column
-
     print("Row count ", row_count)
     print("Column ", column_count)
     worksheet.insert_rows(3)
