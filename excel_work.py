@@ -60,7 +60,7 @@ def copy_formula():
     end_row = re.findall("\d+", end)[0]
     print("End Row ", end_row)
     shift_range = int(end_row) - int(start_row)
-   
+  
     #print("Type ", worksheet)
     #sheet = workbook.active
     value = worksheet["C2"].value
