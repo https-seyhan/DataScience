@@ -70,7 +70,6 @@ def copy_formula():
 
     print("Row count ", row_count)
     print("Column ", column_count)
-
     worksheet.insert_rows(3)
     row_shift = 3
     
