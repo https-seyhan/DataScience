@@ -72,7 +72,7 @@ def copy_formula():
     print("Column ", column_count)
     worksheet.insert_rows(3)
     row_shift = 3
-   
+  
   
     #new_range_start = 
     #new_range_end = 
