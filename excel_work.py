@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import re
 import os
-os.chdir('/home/saul/Business')
+
 from openpyxl import Workbook
 from openpyxl import load_workbook
 from openpyxl.utils import FORMULAE
