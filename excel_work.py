@@ -48,7 +48,6 @@ def get_function_ranges(cellFormula):
     start = ranges.split(':')[0]
     end = ranges.split(':')[1]
     return funct, start, end
-
   
 def copy_formula():
     print("Copy Formula Called")
@@ -57,7 +56,7 @@ def copy_formula():
     worksheet = workbook['Sheet2']
     funct, start, end = get_function_ranges(worksheet["C3"].value)
     print("Function {} start at {} and ends at {}".format(funct, start, end))
-   
+  
     start_row = re.findall("\d+", start)[0]
     print("Start Row ", start_row)
     
