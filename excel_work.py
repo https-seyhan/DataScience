@@ -73,7 +73,7 @@ def copy_formula():
     row_shift = 3
 
     #new_range_start = 
-    #new_range_end = 
+    #new_range_end =
     #Add formula 
     worksheet["D7"] = "=AVERAGE(D9:D26)"
     workbook.save("sample_v3.xlsx")
