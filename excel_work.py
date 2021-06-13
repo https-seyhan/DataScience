@@ -49,7 +49,6 @@ def get_function_ranges(cellFormula):
     end = ranges.split(':')[1]
     return funct, start, end
     
-
     
 def copy_formula():
     print("Copy Formula Called")
