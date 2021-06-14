@@ -48,7 +48,7 @@ def get_function_ranges(cellFormula):
     start = ranges.split(':')[0]
     print("Start !!! ", start)
     end = ranges.split(':')[1]
- 
+
     return funct, ranges, start, end
 
 def update_formulas(workbook, worksheet, column_label, column, funct, row_shift, start_row, end_row):
