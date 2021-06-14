@@ -71,7 +71,6 @@ def update_formulas(workbook, worksheet, column_label, column, funct, row_shift,
     
     workbook.save("sample_v3.xlsx")
 
-
 def count_dates(workbook, worksheet):
     print("Count Dates called !!")
     row_count = worksheet.max_row
