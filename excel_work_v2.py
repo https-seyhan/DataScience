@@ -54,7 +54,7 @@ def update_formulas(workbook, worksheet, column_label, column, funct, row_shift,
     print("Update Formulas called !!")
     row_location = 3
     #new_start_row = row_shift + int(start_row)
- 
+
     print("Column ", column)
     print("Column Labels ", column_label)
 
