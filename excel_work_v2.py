@@ -11,7 +11,6 @@ from openpyxl.utils import FORMULAE
 from openpyxl.utils.dataframe import dataframe_to_rows
 from openpyxl.utils import get_column_letter
 
-
 def test():
     print("Test")
     workbook = Workbook()
