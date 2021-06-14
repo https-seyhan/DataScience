@@ -63,7 +63,6 @@ def update_formulas(workbook, worksheet, column_label, column, funct, row_shift,
     print("Word ", word)
     print("Start Row ", start_row)
     print("Column ", column)
-
     print("Word ", word, '\n')
    
     #worksheet[column_coordinate]= '=' + funct + '(' + column + str(new_start_row) + ':' + column + str(new_end_row) + ')'
