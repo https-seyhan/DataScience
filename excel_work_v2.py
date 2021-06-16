@@ -36,7 +36,6 @@ def excel_work():
      workbook.save("sample.xlsx")
      print("Saved")
 
-
 def get_function_ranges(cellFormula):
     print("Cell formula ", cellFormula)
     formula = cellFormula.translate({ord(char): None for char in '='})
