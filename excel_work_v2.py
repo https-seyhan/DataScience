@@ -36,7 +36,7 @@ def excel_work():
      workbook.save("sample.xlsx")
      print("Saved")
      #for row in worksheet.rows:
-     print (row)
+    print (row)
 
 def get_function_ranges(cellFormula):
     print("Cell formula ", cellFormula)
