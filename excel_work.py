@@ -49,7 +49,6 @@ def get_function_ranges(cellFormula):
     return funct, start, end
 
 def update_formulas(worksheet, funct, row_shift, start_row, end_row):
-
     #new_start_row = row_shift + int(start_row)
     new_start_row  = 5
     new_end_row = row_shift + int(end_row)
