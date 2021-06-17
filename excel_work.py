@@ -62,7 +62,6 @@ def count_dates(worksheet):
     row_count = worksheet.max_row
     column_count = worksheet.max_column
     row_location = 3
-
     print("Max Row count ", row_count)
     print("Max Column ", column_count)
     # insert insert three roe at row three
