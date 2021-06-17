@@ -79,7 +79,7 @@ def count_dates(worksheet):
             if row_shift > 0:
                 print('{} rows inserted'.format(row_shift))
                 funct, start, end = get_function_ranges(worksheet[cell_name].value)
- 
+
                 start_row = re.findall("\d+", start)[0]
                 #print("Start Row ", start_row)
    
