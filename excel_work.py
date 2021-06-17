@@ -56,7 +56,7 @@ def get_function_ranges(cellFormula):
     print("Ranges ", ranges)
     start = ranges.split(':')[0]
     end = ranges.split(':')[1]
-    
+   
     return funct, start, end
 
 def update_formulas(worksheet, funct, row_shift, start_row, end_row):
