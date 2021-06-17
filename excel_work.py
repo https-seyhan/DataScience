@@ -81,7 +81,7 @@ def count_dates(worksheet):
                 funct, start, end = get_function_ranges(worksheet[cell_name].value)
                 start_row = re.findall("\d+", start)[0]
                 #print("Start Row ", start_row)
-   
+  
                 end_row = re.findall("\d+", end)[0]
                 #print("End Row ", end_row)
     
