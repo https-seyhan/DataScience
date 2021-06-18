@@ -93,7 +93,6 @@ def copy_formula():
     count_dates(worksheet)
     #funct, start, end = get_function_ranges(worksheet["C3"].value)
     #print("Function {} start at {} and ends at {}".format(funct, start, end))
-
     #start_row = re.findall("\d+", start)[0]
     #print("Start Row ", start_row)
     
