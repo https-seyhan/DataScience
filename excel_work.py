@@ -111,7 +111,7 @@ def copy_formula():
     row_shift = 3
     #for row in range(row_shift):
         #worksheet.insert_rows(row + row_shift_pos)
-   
+  
     #update_formulas(worksheet, funct, row_shift, start_row, end_row)
          
      #Add formula 
