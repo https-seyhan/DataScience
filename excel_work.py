@@ -91,7 +91,6 @@ def copy_formula():
     workbook = load_workbook(filename="sample_v2.xlsx")
     worksheet = workbook['Sheet2']
     count_dates(worksheet)
-
     #funct, start, end = get_function_ranges(worksheet["C3"].value)
   
     #print("Function {} start at {} and ends at {}".format(funct, start, end))
