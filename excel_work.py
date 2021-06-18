@@ -86,7 +86,6 @@ def count_dates(worksheet):
                 shift_range = int(end_row) - int(start_row) + 1
                 update_formulas(worksheet, funct, row_shift, start_row, end_row)
 
-
 def copy_formula():
     #print("Copy Formula Called")
 
