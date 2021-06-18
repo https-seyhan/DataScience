@@ -97,7 +97,7 @@ def copy_formula():
     #print("Start Row ", start_row)
     #end_row = re.findall("\d+", end)[0]
     #print("End Row ", end_row)
-  
+ 
     #shift_range = int(end_row) - int(start_row) + 1
     
     #print("Range  ", shift_range)
