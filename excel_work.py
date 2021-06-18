@@ -95,7 +95,7 @@ def copy_formula():
     #print("Function {} start at {} and ends at {}".format(funct, start, end))
     #start_row = re.findall("\d+", start)[0]
     #print("Start Row ", start_row)
-    
+   
     #end_row = re.findall("\d+", end)[0]
     #print("End Row ", end_row)
   
