@@ -90,7 +90,7 @@ def copy_formula():
     #print("Copy Formula Called")
     workbook = load_workbook(filename="sample_v2.xlsx")
     worksheet = workbook['Sheet2']
-   
+  
     count_dates(worksheet)
  
     #funct, start, end = get_function_ranges(worksheet["C3"].value)
