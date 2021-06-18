@@ -88,7 +88,6 @@ def count_dates(worksheet):
 
 def copy_formula():
     #print("Copy Formula Called")
-
     workbook = load_workbook(filename="sample_v2.xlsx")
     worksheet = workbook['Sheet2']
     
