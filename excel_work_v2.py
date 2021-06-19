@@ -91,7 +91,7 @@ def count_dates(workbook, worksheet):
             # if there is new rows inserted
             if row_shifts > 0:
                 funct, ranges, start, end = get_function_ranges(worksheet.cell(row=traverse_row, column=column).value )
-      
+     
                 #get integer part
                 start_row = re.findall("\d+", start)[0]
                 print("Start Row ", start_row)
