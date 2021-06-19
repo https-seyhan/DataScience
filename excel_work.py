@@ -101,7 +101,7 @@ def copy_formula():
     row_count = worksheet.max_row
     column_count = worksheet.max_column
     #print("Row count ", row_count)
-    
+   
     # insert insert three roe at row three
     row_shift_pos = 5
     row_shift = 3
