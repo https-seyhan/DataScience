@@ -95,7 +95,7 @@ def copy_formula():
     #print("Function {} start at {} and ends at {}".format(funct, start, end))
     #start_row = re.findall("\d+", start)[0]
     #shift_range = int(end_row) - int(start_row) + 1
-   
+  
     #sheet = workbook.active
     value = worksheet["C2"].value
     #print(value)
