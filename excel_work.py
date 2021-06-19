@@ -94,7 +94,7 @@ def copy_formula():
     #funct, start, end = get_function_ranges(worksheet["C3"].value)
     #print("Function {} start at {} and ends at {}".format(funct, start, end))
     #start_row = re.findall("\d+", start)[0]
-    
+   
     #end_row = re.findall("\d+", end)[0]
     #print("End Row ", end_row)
     #shift_range = int(end_row) - int(start_row) + 1
