@@ -82,7 +82,7 @@ def count_dates(workbook, worksheet):
     for traverse_row in range(row_location, row_location + 1): 
         #for column in "CDEFGHJI":  
         while column <= worksheet.max_column:
-       
+      
             #print ("Column !! ", column)
             cell_name = "{}{}".format(column, traverse_row)
             #print("Cell Name ", cell_name)
