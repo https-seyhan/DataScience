@@ -80,7 +80,7 @@ def count_dates(workbook, worksheet):
     for row in range(row_shifts):
         worksheet.insert_rows(row + row_shift_pos)
     #print("Row ", worksheet.max_column +1)
-   
+  
     for traverse_row in range(row_location, row_location + 1): 
         #for column in "CDEFGHJI":  
         while column <= worksheet.max_column:
