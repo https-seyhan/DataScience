@@ -109,7 +109,6 @@ def copy_formula():
     worksheet = workbook['Sheet2']
     
     count_dates(workbook, worksheet)
-
     #sheet = workbook.active
     value = worksheet["C2"].value
     #print(value)
