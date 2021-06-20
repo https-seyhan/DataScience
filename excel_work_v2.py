@@ -94,7 +94,7 @@ def count_dates(workbook, worksheet):
                 print("Start Row ", start_row)
                 end_row = re.findall("\d+", end)[0]
                 print("End Row ", end_row)
-     
+    
                 column_label = re.findall("\w", start)[0]
                 print("Column Label ", column_label)
    
