@@ -104,7 +104,7 @@ def copy_formula():
     #print("Copy Formula Called")
     workbook = load_workbook(filename="sample_v2.xlsx")
     worksheet = workbook['Sheet2']
-  
+ 
     count_dates(workbook, worksheet)
     #sheet = workbook.active
     value = worksheet["C2"].value
