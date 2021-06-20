@@ -96,7 +96,6 @@ def count_dates(workbook, worksheet):
                 print("End Row ", end_row)
                 column_label = re.findall("\w", start)[0]
                 print("Column Label ", column_label)
-
                 shift_range = int(end_row) - int(start_row) + 1
                 update_formulas(workbook, worksheet, column_label, column, funct, row_shifts, start_row, end_row)
             column += 1
