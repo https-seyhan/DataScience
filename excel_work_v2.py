@@ -92,7 +92,7 @@ def count_dates(workbook, worksheet):
                 #get integer part
                 start_row = re.findall("\d+", start)[0]
                 print("Start Row ", start_row)
-  
+ 
                 end_row = re.findall("\d+", end)[0]
                 print("End Row ", end_row)
                 
