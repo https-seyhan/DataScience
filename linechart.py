@@ -1,5 +1,4 @@
 import random
-
 from openpyxl import Workbook
 
 from openpyxl.chart import LineChart, Reference
