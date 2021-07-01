@@ -11,7 +11,6 @@ sheet = workbook.active
 
 # Let's create some sample sales data
 rows = [
-
     ["", "January", "February", "March", "April",
 
     "May", "June", "July", "August", "September",
