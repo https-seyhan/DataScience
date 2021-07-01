@@ -3,7 +3,6 @@ from openpyxl import Workbook
 from openpyxl.chart import LineChart, Reference
 
 import os 
-
 os.chdir('/home/saul/Business')
 
 workbook = Workbook()
