@@ -1,133 +1,31 @@
 import random
+
 from openpyxl import Workbook
+
 from openpyxl.chart import LineChart, Reference
+
 import os 
+
 os.chdir('/home/saul/Business')
 
 workbook = Workbook()
 sheet = workbook.active
 
+
 # Let's create some sample sales data
+
 rows = [
+
     ["", "January", "February", "March", "April",
+
     "May", "June", "July", "August", "September",
+
      "October", "November", "December"],
+
     [1, ],
+
     [2, ],
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     [3, ],
 
 ]
@@ -150,6 +48,7 @@ for row in sheet.iter_rows(min_row=2,
 chart = LineChart()
 
 data = Reference(worksheet=sheet,
+
                  min_row=2,
 
                  max_row=4,
