@@ -37,5 +37,4 @@ data = Reference(worksheet=sheet,
 
 chart.add_data(data, from_rows=True, titles_from_data=True)
 sheet.add_chart(chart, "C6")
-
 workbook.save("line_chart.xlsx")
