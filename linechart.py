@@ -31,7 +31,6 @@ for row in sheet.iter_rows(min_row=2,
 chart = LineChart()
 data = Reference(worksheet=sheet,
                  min_row=2,
-
                  max_row=4,
 
                  min_col=1,
