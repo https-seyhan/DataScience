@@ -23,7 +23,6 @@ for row in rows:
 for row in sheet.iter_rows(min_row=2,
                            max_row=4,
                            min_col=2,
-
                            max_col=13):
     print("Row ", row)
     for cell in row:
