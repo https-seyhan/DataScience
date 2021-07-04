@@ -16,7 +16,6 @@ rows = [
     [1, ],
     [2, ],
     [3, ],
-
 ]
 
 for row in rows:
