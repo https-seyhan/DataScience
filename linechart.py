@@ -32,7 +32,6 @@ chart = LineChart()
 data = Reference(worksheet=sheet,
                  min_row=2,
                  max_row=4,
-
                  min_col=1,
 
                  max_col=13)
