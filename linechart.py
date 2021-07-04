@@ -15,7 +15,6 @@ rows = [
      "October", "November", "December"],
     [1, ],
     [2, ],
-
     [3, ],
 
 ]
