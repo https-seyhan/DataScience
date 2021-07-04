@@ -21,7 +21,6 @@ rows = [
 for row in rows:
     sheet.append(row)
 for row in sheet.iter_rows(min_row=2,
-
                            max_row=4,
 
                            min_col=2,
