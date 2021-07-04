@@ -106,7 +106,6 @@ def copy_formula():
     value = worksheet["C2"].value
     row_count = worksheet.max_row
     column_count = worksheet.max_column
-
     #print("Row count ", row_count)
     #print("Column ", column_count)
      #Add formula 
