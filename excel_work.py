@@ -36,7 +36,7 @@ def excel_work():
      print("Saved")
      #for row in worksheet.rows:
      #     print (row)
-  
+ 
 def get_function_ranges(cellFormula):
     print("Cell formula ", cellFormula)
     formula = cellFormula.translate({ord(char): None for char in '='})
