@@ -76,6 +76,7 @@ def count_dates(worksheet):
             print("Cell Name ", cell_name)
             print("Col values ", worksheet[cell_name].value) # the value of the specific cell
             # if there is new rows inserted
+            
             if row_shift > 0:
                 print('{} rows inserted'.format(row_shift))
                 funct, start, end = get_function_ranges(worksheet[cell_name].value)
