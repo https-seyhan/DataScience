@@ -16,7 +16,6 @@ rows = [
     [2, ],
     [3, ],
 ]
-
 for row in rows:
     sheet.append(row)
 for row in sheet.iter_rows(min_row=2,
