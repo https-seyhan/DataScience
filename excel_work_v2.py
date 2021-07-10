@@ -81,7 +81,7 @@ def count_dates(workbook, worksheet):
         #for column in "CDEFGHJI":  
         while column <= worksheet.max_column:
             cell_name = "{}{}".format(column, traverse_row)
- 
+
             #print("Cell Name ", cell_name)
             #print("Col values ", worksheet.cell(row=traverse_row, column=column).value) # the value of the specific cell
             # if there is new rows inserted
@@ -98,7 +98,6 @@ def count_dates(workbook, worksheet):
                 shift_range = int(end_row) - int(start_row) + 1
                 update_formulas(workbook, worksheet, column_label, column, funct, row_shifts, start_row, end_row)
             column += 1
-
 def copy_formula():
     #print("Copy Formula Called")
     workbook = load_workbook(filename="sample_v2.xlsx")
