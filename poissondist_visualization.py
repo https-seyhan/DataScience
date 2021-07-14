@@ -18,6 +18,7 @@ plt.bar(a, poi.pmf(a, lambda_[0]), color=colors[0], label="$\lambda_ = %.1f$" % 
         edgecolor= colors[0], lw="3")
 plt.bar(a, poi.pmf(a, lambda_[1]), color=colors[1], label="$\lambda_ = %.1f$" % lambda_[1], alpha = 0.60, 
         edgecolor= colors[0], lw="3")
+
 plt.xticks(a + 0.4, a)
 plt.legend()
 plt.ylabel("Probability of $k$")
