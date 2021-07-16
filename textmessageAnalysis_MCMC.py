@@ -33,6 +33,7 @@ with pm.Model() as model:
     print("Random output:", tau.random(), tau.random(), tau.random())
 n_data_points = size
 idx = np.arange(n_data_points)
+
 with model:
     lambda_ = pm.math.switch(tau >= idx, lambda_1, lambda_2)
 
