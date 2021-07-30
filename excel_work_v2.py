@@ -32,7 +32,6 @@ def excel_work():
      worksheet.insert_rows(13)
      workbook.save("sample.xlsx")
 
-
 def get_function_ranges(cellFormula):
     print("Cell formula ", cellFormula)
     formula = cellFormula.translate({ord(char): None for char in '='})
