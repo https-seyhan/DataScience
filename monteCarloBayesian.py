@@ -12,6 +12,7 @@ from matplotlib import pyplot as plt
 os.chdir("/home/saul/pythonWork")
 #textfile = pd.read_csv("txtdata.csv", sep=",", header=None)
 textfile = np.loadtxt("txtdata.csv")
+
 #print(textfile.describe())
 #@pm.deterministic
 size = len(textfile)
