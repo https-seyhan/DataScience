@@ -10,6 +10,6 @@ def list_files(dir):
     for subdir in subdirs:                                                                           
         files = os.walk(subdir).next()[2]                                                                    
         if (len(files) > 0):                                                                  
-            for file in files:                                                                                
+            for file in files:                                                                               
                 r.append(subdir + "/" + file)                                                                         
     return r
