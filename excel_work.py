@@ -110,6 +110,7 @@ def copy_formula():
     #for row in range(row_shift):
         #worksheet.insert_rows(row + row_shift_pos)
     #update_formulas(worksheet, funct, row_shift, start_row, end_row)
+    
     #Add formula 
     worksheet["D7"] = "=AVERAGE(D9:D26)"
     workbook.save("sample_v3.xlsx")
