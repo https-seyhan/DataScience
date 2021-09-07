@@ -6,7 +6,6 @@ import os
 os.chdir('/home/saul/Business')
 workbook = Workbook()
 sheet = workbook.active
-
 # Let's create some sample sales data
 rows = [
     ["", "January", "February", "March", "April",
