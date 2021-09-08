@@ -84,7 +84,7 @@ def count_dates(workbook, worksheet):
             #print("Cell Name ", cell_name)
             #print("Col values ", worksheet.cell(row=traverse_row, column=column).value) # the value of the specific cell
             # if there is new rows inserted
-    
+   
             if row_shifts > 0:
                 funct, ranges, start, end = get_function_ranges(worksheet.cell(row=traverse_row, column=column).value )
                 #get integer part
