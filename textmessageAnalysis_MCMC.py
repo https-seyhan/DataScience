@@ -26,6 +26,7 @@ plt.title("Did the user's texting habit change over time?")
 plt.xlim(0, size)
 
 # Create the MCMC model with its parameters (lambdas, tau)
+
 with pm.Model() as model:
     lambda_1 = pm.Exponential('lambda_1', alpha) # create stochastic variable
     lambda_2 = pm.Exponential('lambda_2', alpha) #create stochastic variable
