@@ -37,6 +37,7 @@ idx = np.arange(n_data_points)
 with model:
     lambda_ = pm.math.switch(tau >= idx, lambda_1, lambda_2)
 #pm.Poisson("obs", lambda_, value = textfile, observed=True)
+
 with model:
     obs = pm.Poisson("obs", lambda_, observed=textfile)
 print(obs.tag.test_value)
