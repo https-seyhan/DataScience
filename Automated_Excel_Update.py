@@ -73,7 +73,7 @@ def count_dates(workbook, worksheet):
     # insert insert three roe at row three
     row_shift_pos = 5
     row_shifts = 3
-   
+  
     for row in range(row_shifts):
         worksheet.insert_rows(row + row_shift_pos)
     #print("Row ", worksheet.max_column +1)
@@ -96,7 +96,7 @@ def count_dates(workbook, worksheet):
                 shift_range = int(end_row) - int(start_row) + 1
                 update_formulas(workbook, worksheet, column_label, column, funct, row_shifts, start_row, end_row)
             column += 1
-          
+         
 def copy_formula():
     #print("Copy Formula Called")
     workbook = load_workbook(filename="sample_v2.xlsx")
