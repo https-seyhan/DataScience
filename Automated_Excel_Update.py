@@ -83,7 +83,7 @@ def count_dates(workbook, worksheet):
             #print("Cell Name ", cell_name)
             #print("Col values ", worksheet.cell(row=traverse_row, column=column).value) # the value of the specific cell
             # if there is new rows inserted
-  
+ 
             if row_shifts > 0:
                 funct, ranges, start, end = get_function_ranges(worksheet.cell(row=traverse_row, column=column).value )
                 #get integer part
@@ -96,7 +96,7 @@ def count_dates(workbook, worksheet):
                 shift_range = int(end_row) - int(start_row) + 1
                 update_formulas(workbook, worksheet, column_label, column, funct, row_shifts, start_row, end_row)
             column += 1
-         
+        
 def copy_formula():
     #print("Copy Formula Called")
     workbook = load_workbook(filename="sample_v2.xlsx")
