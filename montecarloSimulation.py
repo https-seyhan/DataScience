@@ -31,6 +31,7 @@ def simple_bettor(funds, initial_wager, wager_count):
 			wX.append(current_Wager)
 			vY.append(value)	
 		current_Wager +=1
+		
 	if value < 0:
 		value = 'Broke'
 	elif value > 0:
