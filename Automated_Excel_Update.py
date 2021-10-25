@@ -73,7 +73,7 @@ def count_dates(workbook, worksheet):
     # insert insert three roe at row three
     row_shift_pos = 5
     row_shifts = 3
- 
+
     for row in range(row_shifts):
         worksheet.insert_rows(row + row_shift_pos)
    
