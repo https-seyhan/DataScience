@@ -29,7 +29,7 @@ def excel_work():
          #print(row)
     
      worksheet.cell(row=33, column=2).value = 'World Wide'
-     worksheet.cell(row=34, column=2).value = 'https://openpyxl.readthedocs.io/en/latest/pandas.html'
+     worksheet.cell(row=34, column=2).value = 'Text Add'
      worksheet.insert_rows(13)
      workbook.save("sample.xlsx")
 
