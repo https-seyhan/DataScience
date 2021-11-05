@@ -27,7 +27,7 @@ def excel_work():
      column_count = worksheet.max_column
      print("Row count ", row_count)
      print("Column ", column_count)
-   
+  
      #for row in worksheet.iter_rows(values_only=True):
          #print(row)
 
