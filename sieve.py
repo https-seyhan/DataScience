@@ -13,7 +13,7 @@ def sieve(N):
 	return is_prime[N]
 
 if __name__ == '__main__':
-	
+
     primeNumbers = []
 	#writer = csv.writer(open("sieve.csv", 'w'))
 	for candidate in range(10, 100):
