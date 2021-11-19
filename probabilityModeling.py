@@ -22,6 +22,7 @@ class probabilityModel:
         ax1.plot(np.log(randomVal))
         ax2.plot(randomVal)
         plt.show()
+        
 if __name__ == '__main__':
     probm = probabilityModel()
     #probm.generateModel()
