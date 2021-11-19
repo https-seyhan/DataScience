@@ -30,7 +30,7 @@ with pm.Model():
     x = pm.Normal('x', mu=0, sd=1)
     plus_2 = pm.Deterministic('x plus 2', x + 2)
     print("X: ", plus_2)
-    
+   
 def lambda_ (tau=tau, lambda_1 = lambda_1, lambda_2 = lambda_2):
     out = np.zeros(size)
     out[:tau] = lambda_1
