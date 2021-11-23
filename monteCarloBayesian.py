@@ -16,7 +16,6 @@ textfile = np.loadtxt("txtdata.csv")
 #@pm.deterministic
 size = len(textfile)
 print(size)
-
 #alpha = 1 / size
 alpha = 1.0 / textfile.mean()
 
