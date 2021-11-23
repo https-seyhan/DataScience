@@ -7,7 +7,7 @@ def createMatrix():
 	x = matrix( [[1],[2],[3]] )
 	y = matrix( [[1,2,3]] ) 
 	print('Matrix of A :',A)
-	#print(A*x)
+	print(A*x)
 	calculateMatrix(A, x, y)
 	
 def calculateMatrix(A,x,y):
