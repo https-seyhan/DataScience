@@ -18,7 +18,9 @@ def test():
     workbook.save(filename="hello_world.xlsx")
 
 def excel_work():
-     workbook = load_workbook(filename="sample.xlsx")
+     workbook = load_workbook(filename=)
+39
+"sample.xlsx")
      worksheet = workbook['Sheet2']
      #sheet = workbook.active
      value = worksheet["C2"].value
@@ -69,7 +71,7 @@ def count_dates(worksheet):
     row_shift = 3
     for row in range(row_shift):
         worksheet.insert_rows(row + row_shift_pos)
-   
+  
     print("Row ", worksheet.max_column +1)
     for traverse_row in range(row_location, row_location + 1): 
         for column in "CDEFGHJI":  #Here you can add or reduce the columns
