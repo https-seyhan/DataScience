@@ -1,4 +1,4 @@
-
+#This is an example of MCMC simulation
 import random
 import matplotlib
 import matplotlib.pyplot as plt
