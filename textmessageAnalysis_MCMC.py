@@ -32,7 +32,7 @@ with pm.Model() as model:
     lambda_2 = pm.Exponential('lambda_2', alpha) #create stochastic variable
     tau = pm.DiscreteUniform("tau", lower=0, upper=size) # tau has Uniform distribution
     print("Random output:", tau.random(), tau.random(), tau.random())
-  
+ 
 n_data_points = size
 idx = np.arange(n_data_points)
 
