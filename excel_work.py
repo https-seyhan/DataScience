@@ -10,7 +10,7 @@ from openpyxl.utils import get_column_letter
 os.chdir('/home/saul/Business')
 
 def test():
-    print("Test")
+    
     workbook = Workbook()
     sheet = workbook.active
     sheet["A1"] = "hello"
