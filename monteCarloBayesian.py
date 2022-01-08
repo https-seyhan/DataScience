@@ -33,5 +33,5 @@ def lambda_ (tau=tau, lambda_1 = lambda_1, lambda_2 = lambda_2):
     out = np.zeros(size)
     out[:tau] = lambda_1
     out[tau:] = lambda_2
- 
+
 print(lambda_(tau.random(), lambda_1.random(), lambda_2.random()))
