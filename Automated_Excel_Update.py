@@ -109,7 +109,7 @@ def copy_formula():
     #print("Row count ", row_count)
     #print("Column ", column_count)
     
-    #Add formula 
+    #Add formula
     worksheet["D7"] = "=AVERAGE(D9:D26)"
     workbook.save("sample_v3.xlsx")
 
