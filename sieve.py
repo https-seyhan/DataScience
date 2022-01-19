@@ -11,7 +11,6 @@ def sieve(N):
 		   for witness in range(candidate * candidate, N + 1, candidate):
                is_prime[witness] = False
 	return is_prime[N]
-
 if __name__ == '__main__':
     primeNumbers = []
 	#writer = csv.writer(open("sieve.csv", 'w'))
