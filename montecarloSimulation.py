@@ -46,4 +46,4 @@ while  x < 100:
 
 plt.ylabel('Account Value')
 plt.xlabel('Wager Count')
-plt.show()Hande Yener
+plt.show()
