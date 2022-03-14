@@ -20,7 +20,7 @@ def simple_bettor(funds, initial_wager, wager_count):
 	wager = initial_wager
 	wX = []
 	vY = []
-
+	
 	current_Wager = 1
 	while current_Wager < wager_count:
 		if roll_Dice():
