@@ -12,6 +12,7 @@ print(type(a))
 poi = stats.poisson
 lambda_ = [1.5, 4.25]
 colors = ["#348ABD","#A60628"]
+
 print(colors)
 
 plt.bar(a, poi.pmf(a, lambda_[0]), color=colors[0], label="$\lambda_ = %.1f$" % lambda_[0], alpha = 0.60, 
