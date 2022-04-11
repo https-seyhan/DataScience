@@ -23,4 +23,4 @@ class probabilityModel:
 
 if __name__ == '__main__':
     probm = probabilityModel()
-    #probm.generateModel()
+    probm.generateModel()
