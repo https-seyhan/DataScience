@@ -7,7 +7,6 @@
 import scipy.stats as stats
 import numpy as np
 from matplotlib import pyplot as plt
-
 a = np.arange(16)
 print(type(a))
 poi = stats.poisson
