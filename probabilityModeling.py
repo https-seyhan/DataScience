@@ -1,7 +1,7 @@
 import numpy as np
 from random import *
 from matplotlib import  pyplot as plt
-
+# probability model
 class probabilityModel:
     randomVariable = []
    
