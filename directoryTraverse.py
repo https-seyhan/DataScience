@@ -6,7 +6,7 @@
 import os
 
 def list_files(dir):  
-    
+   
     r = []                                                                                                    
     subdirs = [x[0] for x in os.walk(dir)]
     for subdir in subdirs:                                                                         
