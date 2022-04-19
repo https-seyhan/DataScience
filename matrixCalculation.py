@@ -14,7 +14,6 @@ def calculateMatrix(A,x,y):
 	multip = A*x
 	print(A + y)
 	print(A*x)
-
 	print('Multiplication :', multip)
 	print('Transpose of A : ', A.T)
 	print('Inverse of A :', A.I)
