@@ -5,7 +5,7 @@ from numpy import linalg # The Linear Algebra module of NumPy offers various met
 def createMatrix():
 	A = matrix([[1,2,3], [11,12,13], [21, 22,23]])
 	x = matrix( [[1],[2],[3]] )
-	y = matrix( [[1,2,3]] ) 
+	y = matrix( [[1,2,3]] )
 	print('Matrix of A :',A)
 	print(A*x)
 	calculateMatrix(A, x, y)
