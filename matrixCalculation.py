@@ -9,7 +9,7 @@ def createMatrix():
 	print('Matrix of A :',A)
 	print(A*x)
 	calculateMatrix(A, x, y)
-	
+
 def calculateMatrix(A,x,y):
 	multip = A*x
 	print(A + y)
