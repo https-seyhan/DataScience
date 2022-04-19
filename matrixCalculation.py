@@ -17,7 +17,7 @@ def calculateMatrix(A,x,y):
 	print('Multiplication :', multip)
 	print('Transpose of A : ', A.T)
 	print('Inverse of A :', A.I)
-	
+
 	print ('Solve Linear Equation of A an X :', linalg.solve(A, x))
 	print(A[2,1])
 	
