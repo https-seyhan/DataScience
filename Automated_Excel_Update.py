@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import re
 import os
-from openpyxl import Workbook
+from openpyxl import Workbook # Excel module
 from openpyxl import load_workbook
 from openpyxl.utils import FORMULAE
 from openpyxl.utils.dataframe import dataframe_to_rows
