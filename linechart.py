@@ -25,7 +25,7 @@ for row in sheet.iter_rows(min_row=2,
                           max_col=13):
     for cell in row:
         cell.value = random.randrange(5, 100)
- 
+
 chart = LineChart()
 data = Reference(worksheet=sheet,
                  min_row=2,
