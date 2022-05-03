@@ -1,7 +1,7 @@
 import random
 import os
 from openpyxl import Workbook
-from openpyxl.chart import LineChart, Reference # openpyxl
+from openpyxl.chart import LineChart, Reference # openpyxl modules
 os.chdir('/home/saul/Business')
 workbook = Workbook()
 sheet = workbook.active
