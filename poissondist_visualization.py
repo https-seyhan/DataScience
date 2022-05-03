@@ -9,6 +9,7 @@ from matplotlib import pyplot as plt
 a = np.arange(16)
 print(type(a))
 poi = stats.poisson
+
 lambda_ = [1.5, 4.25]
 colors = ["#348ABD","#A60628"]
 
