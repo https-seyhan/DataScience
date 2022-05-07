@@ -37,6 +37,7 @@ def excel_work():
      #     print (row)
 
 def get_function_ranges(cellFormula):
+    
     print("Cell formula ", cellFormula)
     formula = cellFormula.translate({ord(char): None for char in '='})
     funct = formula.split("(")[0]
