@@ -2,6 +2,7 @@
 import random
 import matplotlib
 import matplotlib.pyplot as plt
+
 # MCMC
 def roll_Dice():
 	roll = random.randint(1,100)
