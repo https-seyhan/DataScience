@@ -21,7 +21,6 @@ def simple_bettor(funds, initial_wager, wager_count):
 	wager = initial_wager
 	wX = []
 	vY = []
-
 	current_Wager = 1
 	while current_Wager < wager_count:
 		if roll_Dice():
@@ -40,7 +39,6 @@ def simple_bettor(funds, initial_wager, wager_count):
 	elif value == 0:
 		value = 'Equal'
 	plt.plot(wX, vY) # plot the distribution of data
-
 x = 0
 while  x < 100:
 	simple_bettor(10000,100,100000)
