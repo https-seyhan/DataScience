@@ -13,7 +13,6 @@ class probabilityModel:
     def generateModel(self):
         print("Generate Model ")
      
-AU
 
     def __plotProbs(self, randomVal):   
         fig, (ax1, ax2) = plt.subplots(1, 2)
