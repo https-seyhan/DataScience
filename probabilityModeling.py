@@ -11,7 +11,7 @@ class probabilityModel:
         self.__plotProbs(randomVariable)
     
     def generateModel(self):
-        print("Generate Model Here")
+        print("Generate Model ")
    
     def __plotProbs(self, randomVal):    
         fig, (ax1, ax2) = plt.subplots(1, 2)
