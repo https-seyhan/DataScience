@@ -6,7 +6,7 @@ from matplotlib import  pyplot as plt
 #class
 class probabilityModel:
     randomVariable = []
-
+    #
     def __init__(self):  
         randomVariable = np.random.rand(100)
         self.__plotProbs(randomVariable)
