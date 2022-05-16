@@ -3,7 +3,7 @@
 """
 @author: saul
 """
-# Crawl through 
+# Crawl through directories
 import os
 
 def list_files(dir):  
