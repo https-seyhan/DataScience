@@ -1,0 +1,47 @@
+📌 Understanding Poisson Regression in This Model
+
+    We are using Poisson regression to model the number of incidents (IncidentCount) based on text embeddings.
+    The Poisson distribution is ideal for count data (non-negative integers like incident occurrences).
+    The predicted count of incidents is then used to estimate probabilities of death per year.
+
+📊 Poisson Regression Output
+
+The output will look something like this (simplified):
+TextFeature	RiskLevel	Severity	Priority	Predicted_Deaths	Death_Probability
+Minor safety issue reported	Low	Minor	Low	1.2	0.05
+Risk of falling objects is high	Medium	Moderate	Normal	4.5	0.18
+Severe flooding at the site	High	Severe	Urgent	20.1	0.80
+Some safety concerns raised	Medium	Moderate	Normal	3.8	0.15
+Potential hazard identified	Medium	Severe	High	7.2	0.29
+Low-impact site risk identified	Low	Minor	Low	0.8	0.03
+Workers reported some risk	Medium	Moderate	Normal	2.0	0.08
+Major accident risk detected	High	Severe	Urgent	19.0	0.76
+Hazardous area spotted	High	Severe	High	15.5	0.62
+Worksite safety moderate	Medium	Moderate	Normal	5.0	0.20
+📌 Interpreting the Columns
+
+    Predicted_Deaths → The Poisson regression model estimates the expected number of incidents per year.
+        Example: "Severe flooding at the site" → 20.1 predicted deaths (high risk).
+        Example: "Low-impact site risk identified" → 0.8 predicted deaths (low risk).
+
+    Death_Probability → This is normalized to sum to 1 across all rows.
+        This gives the relative probability of death for each scenario.
+
+📌 How Poisson Regression Works
+
+    Poisson regression assumes the log of the expected count is a linear function of the predictors:
+    log⁡(E[Y])=β0+β1X1+β2X2+...+βnXn
+    log(E[Y])=β0​+β1​X1​+β2​X2​+...+βn​Xn​
+        E[Y] is the expected incident count.
+        X_1, X_2, ..., X_n are SBERT text embeddings.
+        The model exponentiates the output to predict the incident rate.
+
+    This means:
+        Higher-risk text embeddings lead to higher predicted incident counts.
+        The final probability is derived from the relative proportions of incidents.
+
+✅ Key Takeaways
+
+✔ Poisson regression predicts expected incidents based on textual risk descriptions.
+✔ Probability of death is assigned based on normalized incident counts.
+✔ High-severity descriptions (e.g., "Major accident risk detected") result in higher predicted counts.
