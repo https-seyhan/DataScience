@@ -28,3 +28,31 @@ new_data['Predicted_Deaths'] = model.predict(new_data)
 
 # Display the predictions
 new_data
+
+# Model Evaluation
+
+# 1. Model Summary
+model_summary = model.summary()
+
+# 2. Deviance Residuals (to check model fit)
+deviance_residuals = model.resid_deviance
+
+# 3. Pearson Residuals (to check for overdispersion)
+pearson_residuals = model.resid_pearson
+
+# 4. Log-Likelihood (higher is better)
+log_likelihood = model.llf
+
+# 5. AIC (Akaike Information Criterion - lower is better)
+aic_value = model.aic
+
+# Display results
+{
+    "Model Summary": model_summary,
+    "Deviance Residuals": deviance_residuals,
+    "Pearson Residuals": pearson_residuals,
+    "Log-Likelihood": log_likelihood,
+    "AIC": aic_value
+}
+
+
