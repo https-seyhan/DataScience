@@ -1,0 +1,10 @@
+✅ Summary: What You Can Use Without Labels
+Metric	SVD	LDA	NMF	Use When…
+Coherence (c_v)	✔️	✔️	✔️	Best measure of topic quality
+Diversity Score	✔️	✔️	✔️	Check uniqueness of topics
+Perplexity	❌	✔️	❌	Good for generalization (LDA only)
+pyLDAvis	❌	✔️	✔️	Great for inspecting topics manually
+
+want to focus on unsupervised metrics that evaluate coherence, interpretability, and distinctiveness of topics.
+
+Here’s how you can evaluate SVD, LDA, and NMF topic labeling quality without labels:
