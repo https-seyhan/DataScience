@@ -1,0 +1,120 @@
+A network analysis of categorical and numerical variables involves representing relationships between variables or entities as a graph, where nodes represent variables or categories, and edges represent some form of association or similarity. This is a powerful way to visualize and interpret complex interactions in mixed datasets.
+
+Here's a step-by-step guide to performing a network analysis with both categorical and numerical variables:
+1. Define Your Objective
+
+Before starting, clarify what you're trying to analyze. Examples:
+
+    How are different categorical groups related based on numerical similarity?
+
+    What variables are most interconnected in your dataset?
+
+    Are there clusters or communities of related variables or observations?
+
+2. Data Preparation
+Types of Variables
+
+    Categorical: Gender, Occupation, Region, etc.
+
+    Numerical: Age, Income, Purchase Amount, etc.
+
+Encoding Categorical Variables
+
+To compute similarities or distances:
+
+    One-hot encoding (for mutual presence)
+
+    Label encoding (if ordinal)
+
+    Embedding techniques (if using ML or dimensionality reduction)
+
+3. Measure Relationships
+Between Numerical Variables
+
+    Correlation (Pearson, Spearman)
+
+    Distance (Euclidean, Manhattan)
+
+Between Categorical Variables
+
+    Cramér's V (association between nominal variables)
+
+    Theil’s U (information-theoretic)
+
+    Chi-squared statistic
+
+Between Categorical and Numerical Variables
+
+    ANOVA / F-test (differences in means)
+
+    Point-biserial correlation (binary categorical vs continuous)
+
+    Mutual Information
+
+4. Create Network Graph
+Nodes: Variables or categories
+
+    Option 1: Nodes = Variables (categorical and numerical)
+
+    Option 2: Nodes = Categories / Bins / Entity types (e.g., Customer segments)
+
+Edges: Statistical associations
+
+    Weighted by strength of correlation, mutual information, or statistical significance
+
+    Can be thresholded (e.g., edges only if p < 0.05 or correlation > 0.3)
+
+5. Visualization
+
+Use tools such as:
+
+    Python libraries: networkx, igraph, pyvis, Plotly, Gephi
+
+    Edge coloring: Differentiate positive/negative or type of relationship
+
+    Node coloring: Differentiate variable types (categorical vs numerical)
+
+Example using networkx (Python):
+
+import pandas as pd
+import networkx as nx
+import numpy as np
+from scipy.stats import pearsonr
+
+# Dummy example: correlation between numerical variables
+data = pd.read_csv("your_data.csv")
+numerical_cols = data.select_dtypes(include=np.number).columns
+
+G = nx.Graph()
+for i in range(len(numerical_cols)):
+    for j in range(i + 1, len(numerical_cols)):
+        var1, var2 = numerical_cols[i], numerical_cols[j]
+        corr, _ = pearsonr(data[var1], data[var2])
+        if abs(corr) > 0.3:  # threshold
+            G.add_edge(var1, var2, weight=round(corr, 2))
+
+nx.draw(G, with_labels=True)
+
+6. Optional: Community Detection / Clustering
+
+    Use algorithms like Louvain, Girvan-Newman, or modularity optimization
+
+    Identify tightly connected groups of variables or observations
+
+7. Interpretation
+
+    Centrality Measures: Degree, Betweenness, Eigenvector – which variables are most influential?
+
+    Communities: Groups of variables that interact closely
+
+    Bridges: Variables connecting different communities
+
+Bonus: Bipartite Networks
+
+If you want to show relations between entities and categories (e.g., Customers ↔ Products, or Patients ↔ Symptoms):
+
+    Use a bipartite network
+
+    Nodes are of two types
+
+    Edges represent relationships (e.g., purchases, co-occurrences)
