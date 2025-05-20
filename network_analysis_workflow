@@ -1,0 +1,100 @@
+Network analysis can be applied to both categorical and numerical variables, but the methods and interpretations differ depending on the data type. Below is a breakdown of how to perform network analysis with both types:
+🔹 1. Overview of Network Analysis
+
+Network analysis involves representing data as nodes (entities) and edges (relationships), often used to analyze patterns, relationships, and structure.
+🔸 2. Categorical Variables in Network Analysis
+✅ Use Case:
+
+Understanding co-occurrence, similarity, or transitions between categories.
+🧠 Approaches:
+a. Co-occurrence Networks
+
+    Nodes: Categories (e.g., types of products, job titles).
+
+    Edges: How often two categories occur together (e.g., in the same record).
+
+    Weight: Frequency or strength of co-occurrence.
+
+Example: If a person selects “Action” and “Comedy” movie genres often, these genres are connected in a co-occurrence network.
+b. Transition Networks (Markov Chains)
+
+    Useful when categorical variables represent sequences (e.g., web clicks, career stages).
+
+    Edges represent transitions from one category to another.
+
+c. Bipartite Networks
+
+    Two types of nodes: e.g., people and hobbies.
+
+    Edges connect entities of different types.
+
+🔸 3. Numerical Variables in Network Analysis
+✅ Use Case:
+
+Analyzing similarity or distance between observations based on numerical features.
+🧠 Approaches:
+a. Correlation Networks
+
+    Nodes: Numerical variables.
+
+    Edges: Correlation coefficients between variables (Pearson, Spearman).
+
+    Often thresholded to remove weak correlations.
+
+b. Distance-based Similarity Networks
+
+    Nodes: Observations (e.g., users, cities).
+
+    Edges: Similarity or distance (e.g., Euclidean, cosine).
+
+    Often used in clustering, recommendation, or anomaly detection.
+
+c. K-Nearest Neighbors (KNN) Graph
+
+    Build graph by connecting each node to its k most similar nodes.
+
+    Used in graph-based semi-supervised learning or community detection.
+
+🔸 4. Mixed Data (Categorical + Numerical)
+
+When you have both types:
+🧰 Approaches:
+a. Gower Distance
+
+    Handles mixed types.
+
+    Can be used to compute pairwise similarity and construct similarity networks.
+
+b. Factor Analysis of Mixed Data (FAMD) + Clustering
+
+    Reduce dimensionality and then cluster/group nodes for visualization.
+
+c. Node Attributes
+
+    Use categorical and numerical variables as attributes of nodes in a graph (e.g., user has age [numerical] and gender [categorical]).
+
+🔸 5. Tools for Network Analysis
+
+    Python: NetworkX, igraph, pyvis, scikit-network
+
+    R: igraph, ggraph, tidygraph
+
+    Visualization: Gephi, Cytoscape, D3.js
+
+🔹 6. Example Workflow
+
+    Prepare data (cleaning, encoding for categories).
+
+    Compute relationships:
+
+        Co-occurrence for categorical.
+
+        Correlation/similarity for numerical.
+
+        Gower for mixed.
+
+    Build network (define nodes/edges).
+
+    Analyze (centrality, clustering, communities).
+
+    Visualize (force-directed layouts, node coloring by attribute).
