@@ -1,0 +1,94 @@
+the Mahalanobis Distance is a powerful way to measure similarity between entities, especially when your numerical features have different scales and are correlated.
+🔷 What is Mahalanobis Distance?
+
+Unlike Euclidean distance, Mahalanobis distance accounts for:
+
+    Scale differences (e.g., dollars vs. headcounts)
+
+    Correlations between features (e.g., Sales and Employees might be related)
+
+It's particularly useful for identifying outliers or building similarity networks from multivariate data.
+🔧 Example: Mahalanobis Distance for Network Analysis of Organizations
+
+Let’s use your variables:
+
+    Sales (numerical)
+
+    Number of Employees (numerical)
+
+We will:
+
+    Compute the Mahalanobis distance between each pair of organizations
+
+    Construct a similarity network based on that
+
+🐍 Step-by-step Python Code
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import networkx as nx
+from scipy.spatial import distance
+
+# Sample data
+data = pd.DataFrame({
+    'Organization': ['OrgA', 'OrgB', 'OrgC', 'OrgD', 'OrgE'],
+    'Sales': [100000, 250000, 120000, 90000, 300000],
+    'Num_Employees': [50, 120, 60, 40, 150]
+})
+
+# Select features
+X = data[['Sales', 'Num_Employees']].values
+
+# Compute covariance matrix and inverse
+cov_matrix = np.cov(X, rowvar=False)
+inv_cov_matrix = np.linalg.inv(cov_matrix)
+
+# Compute Mahalanobis distances
+def mahalanobis(u, v, VI):
+    delta = u - v
+    return np.sqrt(np.dot(np.dot(delta, VI), delta.T))
+
+n = len(X)
+distance_matrix = np.zeros((n, n))
+for i in range(n):
+    for j in range(n):
+        distance_matrix[i, j] = mahalanobis(X[i], X[j], inv_cov_matrix)
+
+🌐 Build the Network (with distance threshold)
+
+# Threshold: smaller distance = more similar
+threshold = 2.5  # You can adjust this value
+
+G = nx.Graph()
+for i, org in enumerate(data['Organization']):
+    G.add_node(org)
+
+for i in range(n):
+    for j in range(i+1, n):
+        d = distance_matrix[i, j]
+        if d < threshold:
+            G.add_edge(data['Organization'][i], data['Organization'][j], weight=round(d, 2))
+
+# Visualize
+pos = nx.spring_layout(G, seed=42)
+edges = G.edges(data=True)
+
+nx.draw(G, pos, with_labels=True, node_color='lightgreen', node_size=2000, edge_color='gray')
+nx.draw_networkx_edge_labels(G, pos, edge_labels={(u, v): f"{d['weight']}" for u, v, d in edges})
+plt.title("Organization Network by Mahalanobis Distance")
+plt.show()
+
+✅ Output Interpretation
+
+    Nodes: Organizations
+
+    Edges: Only drawn between similar organizations (low Mahalanobis distance)
+
+    Edge weights: Mahalanobis distance (lower = more similar)
+
+🧠 When to Use Mahalanobis vs. Other Metrics
+Use Case	Use Mahalanobis?
+Features have different scales	✅ Yes
+Features are correlated	✅ Yes
+Uncorrelated or binary features	❌ No (Use Euclidean or Cosine)
