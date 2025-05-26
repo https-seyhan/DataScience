@@ -1,0 +1,57 @@
+    Cosine similarity measures the angle (direction) between vectors, not their magnitude.
+
+🔍 Why A and B Have High Cosine Similarity
+
+Let’s look at simplified versions of their feature vectors:
+
+    A: [100, 200000, 50, 500]
+
+    B: [200, 400000, 100, 1000]
+
+Notice that B is exactly 2× A in every component. So they lie on the same line in 4D space.
+🧠 Cosine Similarity Math
+
+The cosine similarity between two vectors A and B is:
+cos⁡(θ)=A⃗⋅B⃗∥A⃗∥⋅∥B⃗∥
+cos(θ)=∥A
+∥⋅∥B
+∥A
+⋅B
+​
+
+If B⃗=2⋅A⃗B
+=2⋅A
+
+, then:
+
+    Dot product: A⃗⋅B⃗=A⃗⋅(2A⃗)=2∥A⃗∥2A
+
+⋅B
+=A
+⋅(2A
+)=2∥A
+
+∥2
+
+Magnitudes: ∥B⃗∥=2∥A⃗∥∥B
+∥=2∥A
+
+    ∥
+
+So:
+cos⁡(θ)=2∥A⃗∥2∥A⃗∥⋅2∥A⃗∥=1
+cos(θ)=∥A
+∥⋅2∥A
+∥2∥A
+∥2​=1
+
+That means A and B are perfectly aligned (angle = 0°), so cosine similarity = 1.
+⚖️ Why This Is Useful
+
+Even though A and B differ in scale (size), their structure or proportion is the same. This makes cosine similarity ideal for comparing:
+
+    Organizations of different sizes
+
+    Customers with different total purchases
+
+    Documents of different lengths
