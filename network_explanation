@@ -1,0 +1,104 @@
+🔹 Step 1: Sample Data Creation
+
+df = pd.DataFrame({
+    'organization': [f'Org_{i+1}' for i in range(10)],
+    ...
+})
+
+What it’s doing:
+
+    It's creating a DataFrame with fake data for 10 organizations.
+
+    Each org has 5 numeric metrics: sales_value, num_clients, num_employees, item_quantity, and num_services.
+
+Why it matters for debugging:
+
+    These values are randomly generated. So every run gives you different numbers, which can make debugging tricky unless you fix the random seed (e.g. np.random.seed(42)).
+
+    Make sure the columns you plan to use later are actually in this DataFrame.
+
+🔹 Step 2: Normalize Metrics
+
+features = ['sales_value', 'num_clients', 'num_employees', 'item_quantity', 'num_services']
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(df[features])
+
+What it’s doing:
+
+    Normalizes the feature columns using StandardScaler, which gives each column mean 0 and standard deviation 1.
+
+Why this is important:
+
+    Similarity calculations like cosine similarity are sensitive to scale. Without normalization, one large-scale metric (e.g., sales_value) could dominate the similarity score.
+
+Debug tip:
+
+    If things look weird later, you might want to print(X_scaled) and confirm it looks like a standardized matrix.
+
+🔹 Step 3: Calculate Similarity
+
+similarity = cosine_similarity(X_scaled)
+
+What it’s doing:
+
+    Computes the cosine similarity between each pair of organizations based on the scaled metrics.
+
+    This results in a 10x10 matrix where each entry [i][j] represents similarity between Org_i and Org_j.
+
+Debug tip:
+
+    Check similarity.shape is (10, 10).
+
+    The diagonal should all be 1 (perfect self-similarity).
+
+🔹 Step 4: Build Network Graph
+
+G = nx.Graph()
+...
+threshold = 0.9
+
+What it’s doing:
+
+    Builds a graph where each organization is a node.
+
+    Adds edges between organizations only if their cosine similarity is greater than 0.9.
+
+Why it might fail or behave unexpectedly:
+
+    If 0.9 is too high, you might get very few or no edges.
+
+    You can print(sim) in the loop to debug how many similarities pass the threshold.
+
+    Try temporarily lowering the threshold (e.g., to 0.7) to test.
+
+Debug tip:
+
+    print(G.edges(data=True)) before the plot to see what connections you have.
+
+🔹 Step 5: Visualize Network
+
+pos = nx.spring_layout(G, seed=42)
+...
+nx.draw(...)
+
+What it’s doing:
+
+    Lays out the graph in a nice 2D spring layout.
+
+    Edge thickness is scaled by similarity.
+
+    Labels are added for clarity.
+
+Debugging visualization:
+
+    If the graph looks empty or sparse, probably very few similarities exceeded 0.9.
+
+    If nodes overlap or look off, adjusting node_size, layout, or adding plt.tight_layout() might help.
+
+✅ TL;DR Debug Checklist
+Checkpoint	What to Look For
+Step 1	Data randomness: Set seed for reproducibility.
+Step 2	Confirm standardization with print(X_scaled)
+Step 3	Print similarity matrix, confirm it’s symmetric and diagonal = 1
+Step 4	Is threshold too high? Lower it to test connectivity
+Step 5	Use print(G.edges()) to check if graph is being built correctly
