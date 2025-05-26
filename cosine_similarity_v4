@@ -1,0 +1,57 @@
+Why Use Cosine Similarity in Network Analysis?
+1. Focuses on Direction, Not Magnitude
+
+    Cosine similarity measures the angle between two vectors, not their length.
+
+    Two nodes (e.g. organizations, users, documents) with proportional patterns will be seen as very similar, even if their absolute values are different.
+
+✅ Example:
+If Org A and Org B both prioritize revenue over employees and both have similar product/service distributions, they will be seen as similar — even if Org B is 10× larger.
+2. Ideal for High-Dimensional Feature Vectors
+
+    When nodes are described by many attributes (e.g., sales, clients, services, etc.), cosine similarity:
+
+        Treats them as vectors in a multidimensional space
+
+        Computes how "aligned" their behavior or structure is
+
+✅ Useful for:
+
+    Organizations, documents, users, etc., described by metrics or preferences
+
+3. Builds Similarity-Based Networks
+
+    In similarity networks, edges represent closeness or alignment between nodes.
+
+    Cosine similarity provides a natural thresholding approach:
+
+        Edges can be created only when similarity > 0.9, for example
+
+        Edge weights can reflect degree of similarity
+
+✅ Enables:
+
+    Community detection (find groups with similar patterns)
+
+    Centrality analysis (identify typical vs. outlier patterns)
+
+    Role analysis (find peer-like nodes)
+
+4. Insensitive to Scale Differences
+
+    Two entities can be vastly different in size but still follow the same "strategy" or "pattern".
+
+    Cosine similarity captures this nuance, unlike Euclidean distance, which punishes large magnitudes.
+
+5. Works Well for Sparse or Skewed Data
+
+    Especially common in document networks or user-preference graphs where:
+
+        Vectors are sparse (e.g., many 0s)
+
+        Some features dominate others (e.g., heavy-tailed distributions)
+
+📌 In Summary:
+Method	Sensitive to Scale?	Direction-Based?	Common Use
+Cosine Similarity	❌ No	✅ Yes	Pattern/similarity networks
+Euclidean Distance	✅ Yes	❌ No	Spatial/distance-based networks
