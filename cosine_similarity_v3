@@ -49,10 +49,6 @@ Cosine Similarity	Angle Between Vectors	Meaning
 0	90°	Orthogonal (no similarity)
 -1	180°	Opposite directions
 
-Would you like a visual plot or interactive code to play with this idea?
-You said:
-what does it mean Exact Same Direction in network analysis
-ChatGPT said:
 
 In network analysis, saying that two nodes (e.g., organizations, users, documents) are in the "exact same direction" refers to how similar their attribute vectors are in terms of cosine similarity — not their physical layout or positions in a graph drawing.
 📌 What “Exact Same Direction” Means in Network Analysis:
