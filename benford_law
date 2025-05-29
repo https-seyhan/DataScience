@@ -1,0 +1,53 @@
+Here's how you can integrate Benford's Law into your existing code to check how well your numerical columns follow it.
+
+Benford’s Law predicts the frequency distribution of the first digits in naturally occurring datasets. The expected distribution is:
+Digit	Expected %
+1	30.1%
+2	17.6%
+3	12.5%
+4	9.7%
+5	7.9%
+6	6.7%
+7	5.8%
+8	5.1%
+9	4.6%
+✳️ Add this code block before your similarity section:
+
+import seaborn as sns
+
+def leading_digit_distribution(data):
+    data = data[data > 0]  # Benford's Law is for positive numbers
+    leading_digits = data.astype(str).str.replace('.', '').str.lstrip('0').str[0].astype(int)
+    digit_counts = leading_digits.value_counts(normalize=True).sort_index()
+    return digit_counts
+
+# Benford's expected distribution
+benford_dist = pd.Series({
+    1: 0.301, 2: 0.176, 3: 0.125,
+    4: 0.097, 5: 0.079, 6: 0.067,
+    7: 0.058, 8: 0.051, 9: 0.046
+})
+
+# Check Benford compliance for each numerical column
+for col in features:
+    print(f"\n📊 Benford's Law check for '{col}':")
+    col_dist = leading_digit_distribution(df[col])
+    combined = pd.DataFrame({
+        'Benford': benford_dist,
+        'Actual': col_dist.reindex(benford_dist.index, fill_value=0)
+    })
+
+    # Plot
+    combined.plot(kind='bar', figsize=(8, 4), title=f"Benford's Law vs Actual for {col}")
+    plt.xlabel('Leading Digit')
+    plt.ylabel('Proportion')
+    plt.grid(True)
+    plt.show()
+
+✅ Summary of changes:
+
+    Adds Benford’s Law compliance checks for each numeric column in your dataset.
+
+    Plots bar charts comparing actual vs. expected leading-digit distributions.
+
+    Helps detect anomalies or signs of unnatural data generation (e.g., fraud).
