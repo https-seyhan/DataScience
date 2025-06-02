@@ -1,0 +1,104 @@
+Python code performs two main analyses on randomly generated organizational data:
+
+    Benford’s Law analysis on numerical features.
+
+    Cosine similarity and network visualization between organizations based on standardized features.
+
+🧩 Code Explanation
+📦 1. Sample Data Generation
+
+df = pd.DataFrame({...})
+
+Creates a DataFrame with 10 organizations and five numerical features:
+
+    'sales_value': Normally distributed around 10,000.
+
+    'num_clients', 'num_employees', 'item_quantity', 'num_services': Random integers in specified ranges.
+
+📐 2. Feature Normalization
+
+X_scaled = scaler.fit_transform(df[features])
+
+Standardizes the feature data (zero mean, unit variance) for cosine similarity analysis later.
+📊 3. Benford’s Law Analysis
+🔎 Function: leading_digit_distribution(data)
+
+Extracts the first significant digit from each value and calculates:
+
+    Relative frequencies
+
+    Absolute frequencies
+
+    Total valid count (non-zero, positive numbers)
+
+📈 Expected Benford Distribution:
+
+benford_dist = pd.Series({...})
+
+Represents the theoretical frequencies for digits 1–9 under Benford’s Law.
+⚙️ Loop Over Features:
+
+for col in features:
+    ...
+
+For each feature:
+
+    Extract leading digits
+
+    Compare actual vs Benford distribution
+
+    Plot the comparison
+
+    Calculate MAD (Mean Absolute Deviation) from Benford
+
+    Perform Chi-square goodness-of-fit test, if total counts match
+
+🔄 4. Cosine Similarity Between Organizations
+
+similarity = cosine_similarity(X_scaled)
+
+Computes pairwise cosine similarity between organization rows based on scaled features.
+Output: Prints similarity scores for each pair of organizations.
+🌐 5. Network Graph of Similar Organizations
+
+if sim > threshold:
+    G.add_edge(orgs[i], orgs[j], weight=round(sim, 2))
+
+    Edges are added for organization pairs with similarity > 0.4.
+
+    If no edges, a message is printed.
+
+    Otherwise, a network graph is drawn using NetworkX and Matplotlib.
+
+📌 Does the Output Match Benford's Law?
+➤ Probably Not, and Here's Why:
+
+    Small Sample Size (n=10):
+
+        Benford’s Law works best with large, naturally distributed datasets.
+
+        With only 10 values per column, the distribution of leading digits is erratic.
+
+    Randomly Generated Data:
+
+        sales_value is normally distributed, not scale-invariant — violating assumptions of Benford’s Law.
+
+        Other features (num_clients, etc.) are from uniform or limited ranges, which don’t follow Benford’s Law.
+
+    Expected Outcome:
+
+        High MAD values
+
+        Low p-values (if counts match) → indicating deviation from Benford
+
+        Plots will show poor fit to Benford’s curve
+
+✅ Summary
+Component	Purpose
+leading_digit_distribution()	Extracts and counts leading digits
+benford_dist	Theoretical Benford frequencies
+MAD	Measures deviation from Benford’s law
+chisquare()	Statistical test for goodness-of-fit
+cosine_similarity()	Measures org similarity based on features
+networkx graph	Visualizes similar orgs as a network
+Final Insight: The code is structurally correct and performs both analyses. However, due to synthetic and small-scale data, the Benford analysis will almost certainly not match the law.
