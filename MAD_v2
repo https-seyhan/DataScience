@@ -1,0 +1,78 @@
+In the code, MAD refers to Mean Absolute Deviation, a statistical metric used to quantify how closely the actual leading digit distribution of a dataset follows Benford's Law.
+🔍 Where MAD is used in the code:
+
+mad = np.mean(np.abs(actual_rel_full - benford_dist))
+print(f"  ➤ Mean Absolute Deviation (MAD): {mad:.4f}")
+
+📐 What Does It Measure?
+
+For each feature (e.g., 'sales_value', 'num_clients', etc.), the code:
+
+    Computes the actual distribution of leading digits (as proportions).
+
+    Compares it to the theoretical Benford's Law distribution.
+
+    Takes the absolute difference for each digit (1 through 9).
+
+    Averages those differences → that's the MAD.
+
+📊 Formula:
+
+Let:
+
+    AiAi​ = Actual proportion for digit ii
+
+    BiBi​ = Benford's expected proportion for digit ii
+
+Then:
+MAD=19∑i=19∣Ai−Bi∣
+MAD=91​i=1∑9​∣Ai​−Bi​∣
+✅ Interpretation:
+
+    Low MAD (e.g., < 0.015) → actual distribution is very close to Benford's Law (often seen in forensic/accounting audits).
+
+    High MAD → indicates a deviation from expected distribution, suggesting the data does not follow Benford's Law.
+
+📌 Important in Context:
+
+Since your data is randomly generated and small in size:
+
+    MAD will likely be high, confirming that the dataset doesn't conform to Benford’s Law.
+
+Let me know if you'd like to add thresholds (like Nigrini's guideline of 0.006 for close conformity).
+You said:
+add threshold
+ChatGPT said:
+
+Great — let's add interpretation thresholds to the MAD values based on well-established guidelines, such as those suggested by Dr. Mark Nigrini, a leading expert on Benford’s Law.
+✅ Step-by-step Change to Your Code:
+
+Modify this part:
+
+mad = np.mean(np.abs(actual_rel_full - benford_dist))
+print(f"  ➤ Mean Absolute Deviation (MAD): {mad:.4f}")
+
+To this:
+
+mad = np.mean(np.abs(actual_rel_full - benford_dist))
+
+# Interpretation thresholds (based on Nigrini)
+if mad < 0.006:
+    conformity = "✔️ Close conformity (likely Benford-compliant)"
+elif mad < 0.012:
+    conformity = "⚠️ Acceptable conformity (some deviation)"
+elif mad < 0.015:
+    conformity = "❗Marginal conformity (possible issue)"
+else:
+    conformity = "❌ Non-conforming (does not follow Benford's Law)"
+
+print(f"  ➤ Mean Absolute Deviation (MAD): {mad:.4f} → {conformity}")
+
+💡 What These Thresholds Mean:
+MAD Range	Interpretation
+< 0.006	✔️ Strong/close conformity
+0.006 – 0.012	⚠️ Acceptable/possible conformity
+0.012 – 0.015	❗Marginal conformity (questionable)
+> 0.015	❌ Non-conforming (likely not Benford)
+
+These thresholds are commonly used in fraud detection and data auditing.
