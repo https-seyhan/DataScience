@@ -69,5 +69,3 @@ MAD Range	Interpretation
 0.006 – 0.012	⚠️ Acceptable/possible conformity
 0.012 – 0.015	❗Marginal conformity (questionable)
 > 0.015	❌ Non-conforming (likely not Benford)
-
-These thresholds are commonly used in fraud detection and data auditing.
