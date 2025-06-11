@@ -1,4 +1,4 @@
-📌 Understanding Poisson Regression in This Model
+Understanding Poisson Regression in This Model
 
     We are using Poisson regression to model the number of incidents (IncidentCount) based on text embeddings.
     The Poisson distribution is ideal for count data (non-negative integers like incident occurrences).
@@ -18,7 +18,7 @@ Workers reported some risk	Medium	Moderate	Normal	2.0	0.08
 Major accident risk detected	High	Severe	Urgent	19.0	0.76
 Hazardous area spotted	High	Severe	High	15.5	0.62
 Worksite safety moderate	Medium	Moderate	Normal	5.0	0.20
-📌 Interpreting the Columns
+Interpreting the Columns
 
     Predicted_Deaths → The Poisson regression model estimates the expected number of incidents per year.
         Example: "Severe flooding at the site" → 20.1 predicted deaths (high risk).
@@ -27,7 +27,7 @@ Worksite safety moderate	Medium	Moderate	Normal	5.0	0.20
     Death_Probability → This is normalized to sum to 1 across all rows.
         This gives the relative probability of death for each scenario.
 
-📌 How Poisson Regression Works
+How Poisson Regression Works
 
     Poisson regression assumes the log of the expected count is a linear function of the predictors:
     log⁡(E[Y])=β0+β1X1+β2X2+...+βnXn
@@ -40,7 +40,7 @@ Worksite safety moderate	Medium	Moderate	Normal	5.0	0.20
         Higher-risk text embeddings lead to higher predicted incident counts.
         The final probability is derived from the relative proportions of incidents.
 
-✅ Key Takeaways
+Key Takeaways
 
 ✔ Poisson regression predicts expected incidents based on textual risk descriptions.
 ✔ Probability of death is assigned based on normalized incident counts.
