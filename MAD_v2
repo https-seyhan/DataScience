@@ -39,12 +39,7 @@ Since your data is randomly generated and small in size:
 
     MAD will likely be high, confirming that the dataset doesn't conform to Benford’s Law.
 
-Let me know if you'd like to add thresholds (like Nigrini's guideline of 0.006 for close conformity).
-You said:
-add threshold
-ChatGPT said:
-
-Great — let's add interpretation thresholds to the MAD values based on well-established guidelines, such as those suggested by Dr. Mark Nigrini, a leading expert on Benford’s Law.
+the MAD values based on well-established guidelines, such as those suggested by Dr. Mark Nigrini, a leading expert on Benford’s Law.
 ✅ Step-by-step Change to Your Code:
 
 Modify this part:
