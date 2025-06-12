@@ -1,0 +1,46 @@
+If you're analyzing weekly payments for customer service and weekly customer growth, you're in a great position to assess whether your company is scaling sustainably or growing too fast too soon.
+🔍 How to Measure "Too Fast Growth" Using Payments & Customer Growth
+1. 📈 Customer Growth Rate
+
+    Formula:
+    Customer Growth Rate (%)=(New Customers This WeekCustomers Last Week)×100
+    Customer Growth Rate (%)=(Customers Last WeekNew Customers This Week​)×100
+
+    Healthy benchmark: 5–10% weekly is aggressive but manageable; >20% may indicate unsustainable pace unless you’re a startup with strong infrastructure.
+
+2. 💵 Customer Service Cost per Customer
+
+    Formula:
+    Service Cost per Customer=Weekly Customer Service PaymentsNumber of Customers This Week
+    Service Cost per Customer=Number of Customers This WeekWeekly Customer Service Payments​
+
+    Trend analysis:
+
+        Stable or decreasing: Efficiency improving.
+
+        Increasing sharply: Service pressure rising → red flag if customer growth is high.
+
+3. 📊 Cost Elasticity of Growth
+
+    Compare % change in service payments to % change in customer base.
+    Elasticity=%ΔService Payments%ΔCustomers
+    Elasticity=%ΔCustomers%ΔService Payments​
+
+    Interpretation:
+
+        Elasticity < 1 → costs growing slower than customers (good scaling).
+
+        Elasticity > 1 → costs growing faster than customers (possible strain).
+
+4. 🚨 Red Flags to Watch For
+Metric	Risk Indicator
+Service cost/customer ↑ every week	You may be hiring or paying more to catch up.
+Customer complaints ↑	Support team may be overwhelmed.
+Growth >15% weekly but NPS ↓ or churn ↑	Growing without capacity.
+Payments jump without matching customer ↑	Operational inefficiency.
+✅ Example Analysis Template (Weekly)
+Week	Customers	Customer Growth %	Service Payments ($)	Cost/Customer ($)	Elasticity
+1	1,000	–	10,000	10.00	–
+2	1,200	20%	13,200	11.00	1.1
+3	1,440	20%	16,500	11.46	1.125
+If cost/customer and elasticity keep increasing, it suggests you're scaling inefficiently and possibly growing too fast.
