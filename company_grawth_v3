@@ -1,0 +1,28 @@
+
+✅ Business-Style Summary: Growth Efficiency Analysis
+Overview:
+
+This weekly analysis evaluates whether your company's customer growth and service payments are scaling in a healthy, efficient way.
+🔍 Key Findings (Weeks 1–5):
+Metric	Observation
+Customer Growth	Grew steadily at ~20% weekly (Week 2–4).
+Service Payments	Increased more rapidly than customer growth.
+Cost per Customer	Rose from $10 → $13, suggesting rising costs.
+Elasticity	Consistently >1.0 (e.g., 1.94 in Week 5), indicating that costs are growing faster than customers.
+🚨 Interpretation:
+
+    The cost per customer is increasing as the customer base grows.
+
+    The elasticity of service cost (how responsive payments are to customer growth) is consistently above 1.0 — a warning sign of inefficient scaling.
+
+    By Week 5, the system is likely under operational pressure, requiring more spending per customer.
+
+📌 Recommendations:
+
+    Audit your support processes: Are more staff or tools needed, or are current processes inefficient?
+
+    Segment support demand: Identify if new customers require more attention (e.g., onboarding load).
+
+    Target Elasticity < 1: Aim to bring down cost growth relative to customer growth.
+
+    Monitor Customer Satisfaction (e.g., NPS) to ensure service quality isn't falling despite higher spending.
