@@ -1,0 +1,33 @@
+🧠 Advanced Data Science Insights
+
+Using machine learning and clustering techniques, we’ve enhanced the analysis to detect underlying patterns in customer growth vs. service cost behavior:
+1. 🔮 Polynomial Regression (Non-Linear Modeling)
+
+    A quadratic regression model was fitted to predict cost per customer based on:
+
+        Total number of customers
+
+        Weekly customer growth rate
+
+✅ The model's predictions closely matched actual costs:
+Week	Actual Cost/Customer	Predicted Cost/Customer
+2	$11.00	$11.00
+3	$11.46	$11.46
+4	$11.98	$11.98
+5	$13.00	$13.00
+
+This validates that cost is increasing non-linearly, likely due to strain or inefficient scaling.
+2. 🔍 K-Means Clustering (Risk Detection)
+
+    Customers and growth rates were clustered into 2 behavioral groups:
+
+        One cluster represents lower-cost, steady-growth periods
+
+        The other captures riskier, costlier growth phases
+
+📊 The PCA plot visually confirms separation between these groups, helping identify when cost starts increasing disproportionately.
+📌 Strategic Use of These Insights:
+Technique	Use Case
+Polynomial Regression	Predict future support costs under growth
+K-Means Clustering	Detect "inflection points" of unsustainable growth
+PCA	Visualize and simplify multidimensional dynamics
