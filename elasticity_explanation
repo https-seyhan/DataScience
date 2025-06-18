@@ -1,0 +1,12 @@
+When both the percentage change in service payments and percentage change in customers are negative, the elasticity value becomes positive, because:
+Negative % ChangeNegative % Change=Positive Number
+Negative % ChangeNegative % Change​=Positive Number
+📌 What It Means:
+Scenario	Elasticity Value	Interpretation
+Both numerator and denominator are negative	Positive	Costs and customers are shrinking together — scaling down with similar intensity.
+Numerator negative, denominator positive	Negative	Cost is dropping despite growth — possibly improved efficiency.
+Numerator positive, denominator negative	Negative	Cost is rising despite losing customers — a serious inefficiency.
+✅ Summary:
+
+A positive elasticity (even during decline) means costs and customer base are moving in sync.
+But a negative elasticity means costs and customer growth are moving in opposite directions — a red flag that deserves investigation.
