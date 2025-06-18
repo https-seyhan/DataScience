@@ -1,0 +1,11 @@
+Here's the LaTeX version of the Elasticity formula:
+
+\[
+\text{Elasticity} = \frac{\%\Delta \text{Service Payments}}{\%\Delta \text{Customers}}
+\]
+
+This expresses the percentage change in service payments divided by the percentage change in customers, which quantifies how responsive your costs are to your growth.
+
+If you're writing a report or paper and want inline math, use:
+
+$\text{Elasticity} = \frac{\%\Delta \text{Service Payments}}{\%\Delta \text{Customers}}$
