@@ -1,0 +1,21 @@
+when either the percentage change in customers or service payments is zero, elasticity becomes undefined or mathematically unstable.
+⚠️ When One Value is Zero
+Scenario	Math Result	Business Interpretation
+%ΔCustomers = 0 (denominator is zero)	❌ Division by zero (undefined)	Customer base didn’t change, but service cost did.
+%ΔService Payments = 0 (numerator is zero)	✅ Elasticity = 0	No cost change despite customer growth — very efficient.
+🔍 What to Do in Practice
+Case	Suggested Handling
+Denominator is zero	Mark as undefined or NaN; flag for review
+Numerator is zero	Set elasticity to 0
+Both are zero	Define elasticity as 0 or undefined, depending on context
+💡 Business Insight
+
+    If customers aren't growing but costs are, it might indicate:
+
+        Manual service effort
+
+        Fixed overheads scaling independently
+
+        Poor automation
+
+    If costs stay flat while customers grow, it’s often a sign of strong operational efficiency — scaling without extra expense.
