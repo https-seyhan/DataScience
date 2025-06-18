@@ -1,0 +1,13 @@
+📊 Elasticity Interpretation Table
+Elasticity Value	Interpretation	Actionable Insight
+> 1	Highly elastic: Costs are rising faster than customer growth	Growth is costly → investigate scalability issues
+≈ 1	Proportional: Costs and customers are growing in sync	Balanced scaling
+0 < Elasticity < 1	Inelastic: Costs growing slower than customers	Efficient growth
+0	No change in cost despite customer growth	Extremely efficient (or flat rate cost)
+< 0	Inverse: Cost and customer growth move in opposite directions	Red flag: investigate anomalies or inefficiencies
+🔍 Special Cases
+Condition	Example	Meaning
+Both % changes are negative	Customers ↓10%, Payments ↓8%	Positive elasticity → shrinking, but in sync
+Customers ↑, Payments ↓	Customers ↑10%, Payments ↓5%	Negative elasticity → improving efficiency
+Customers ↓, Payments ↑	Customers ↓10%, Payments ↑5%	Negative elasticity → dangerous inefficiency
+Elasticity spikes suddenly	Any	Potential anomaly → root cause analysis recommended
