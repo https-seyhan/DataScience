@@ -1,0 +1,19 @@
+For Microsoft Word, you can insert the elasticity formula using Equation Editor. Here’s how to do it:
+🧾 Steps to Insert the Formula in Word:
+
+    Go to Insert → Equation (or press Alt + =).
+
+    Paste this into the equation box:
+
+Elasticity = \frac{\% \Delta \text{Service Payments}}{\% \Delta \text{Customers}}
+
+Word will render it as:
+Elasticity=%ΔService Payments%ΔCustomers
+Elasticity=%ΔCustomers%ΔService Payments​
+ℹ️ Notes:
+
+    \% renders the percent sign.
+
+    \Delta gives the delta symbol (change).
+
+    \text{} is used to insert readable text.
