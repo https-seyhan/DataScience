@@ -75,3 +75,14 @@ plt.show()
 
 # Show top potential phoenix cases
 print(phoenix_df.head())
+
+
+Data loading and preprocessing
+
+Phoenix pair detection with fuzzy matching
+
+Network graph construction
+
+Isolation Forest anomaly detection
+
+Visualization of risk scores
