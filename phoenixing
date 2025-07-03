@@ -86,3 +86,7 @@ To identify phoenixing, especially from a data or analytical perspective, consid
 ⚠️ Caution
 
 Detecting phoenixing requires combining legal, financial, and behavioral evidence. Not all patterns mean fraud—a startup failing and restarting isn’t always malicious. But repeat offenses, debts left unpaid, and clear asset transfers are strong signals.
+✅ Example (Conceptual)
+Entity	Director	Start	End	Outcome	Asset Transfer To
+ABC Pty Ltd	John Smith	Jan 2020	Oct 2022	Liquidated (debt $500k)	XYZ Pty Ltd
+XYZ Pty Ltd	John Smith	Oct 2022	—	Active	Same address, staff
