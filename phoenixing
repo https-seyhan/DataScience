@@ -1,0 +1,88 @@
+Phoenixing (or "phoenix activity") is a type of corporate fraud where a company is deliberately liquidated to avoid paying debts (like taxes, creditors, or employee entitlements), and its business is transferred to a new company—often with the same directors, staff, and assets—to continue operating under a new name. This is common in industries like construction, labor hire, and cleaning.
+
+To identify phoenixing, especially from a data or analytical perspective, consider a combination of red flags and patterns across business, financial, and network indicators.
+🔍 Key Red Flags & Indicators
+1. Company Lifecycle Patterns
+
+    Frequent company deregistrations followed by new company registrations.
+
+    Short business life span (1–3 years).
+
+    Directors involved in multiple liquidations over time.
+
+2. Commonality Across Entities
+
+    Same directors/shareholders across dissolved and new companies.
+
+    Same physical address, phone number, or website reused.
+
+    Similar or identical ABNs/ACNs, trading names, or branding.
+
+3. Financial Anomalies
+
+    Large debts written off in insolvency, especially:
+
+        Unpaid taxes (ATO)
+
+        Superannuation
+
+        Employee entitlements
+
+    Low or no assets at liquidation but high turnover before.
+
+4. Network and Relationship Clues
+
+    Companies that operate in tight director/ownership networks.
+
+    Use of "straw directors"—directors with no real control, often in multiple failed companies.
+
+    Suppliers/customers that persist across collapsed and new firms.
+
+📊 Data-Driven Detection Approaches
+🧠 1. Network Analysis
+
+    Build a graph of company-director relationships.
+
+    Identify clusters of companies sharing directors, addresses, or contact details.
+
+    Spot repeating director patterns and cyclic company creation.
+
+💸 2. Time Series & Lifecycle Analysis
+
+    Track dates of incorporation and deregistration.
+
+    Calculate life span and flag short-lived entities.
+
+    Look for successive liquidation/incorporation by same individuals.
+
+📑 3. NLP or String Similarity
+
+    Fuzzy match on:
+
+        Company names
+
+        Business descriptions
+
+        Emails/domains
+
+        Addresses
+
+📉 4. Credit Risk and Payment Behavior
+
+    Sudden drop in tax payments or financial filings.
+
+    Repeat insolvency events shortly after overdue tax debts or regulatory warnings.
+
+🔐 Regulatory Data Sources (Australia-specific)
+
+    ASIC registers (director/company history, insolvency)
+
+    ABN Lookup for business continuity
+
+    ATO data on unpaid taxes
+
+    Fair Work Ombudsman reports (underpayment, entitlement issues)
+
+⚠️ Caution
+
+Detecting phoenixing requires combining legal, financial, and behavioral evidence. Not all patterns mean fraud—a startup failing and restarting isn’t always malicious. But repeat offenses, debts left unpaid, and clear asset transfers are strong signals.
