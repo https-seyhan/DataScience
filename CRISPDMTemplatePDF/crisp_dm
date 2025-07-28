@@ -1,0 +1,171 @@
+1. Business Understanding
+
+Objective:
+
+    Clearly define the business problem you're trying to solve.
+
+    This might include reducing customer churn, detecting fraud, predicting sales, or optimizing marketing campaigns.
+
+    Translate business goals into data science objectives (e.g., “Predict churn probability for each customer over the next month”).
+
+Stakeholders:
+
+    Identify the people who will use or be impacted by the results.
+
+    Examples: business executives, product managers, sales teams, operational staff, external clients.
+
+Success Criteria:
+
+    Define how the outcome will be measured and deemed successful.
+
+    Can be quantitative (e.g., increase in retention rate by 10%, model accuracy > 85%) or qualitative (e.g., better decision-making ability).
+
+2. Data Understanding
+
+Data Sources:
+
+    List where data originates: internal databases (SQL, ERP), external APIs, flat files (Excel, CSV), surveys, or third-party vendors.
+
+Data Overview:
+
+    Describe the available variables and data types (e.g., categorical, numerical, datetime).
+
+    State the size and scope of the data (e.g., 2 years of weekly sales data, 200,000 customer records).
+
+Initial Observations:
+
+    Note any early issues such as:
+
+        Missing values
+
+        Outliers or anomalies
+
+        Inconsistent formats
+
+        Unexpected distributions
+
+    Highlight if data coverage is uneven or if there’s sampling bias.
+
+3. Data Preparation
+
+Cleaning Steps:
+
+    Document actions like:
+
+        Imputation of missing values (e.g., mean, median, mode)
+
+        Removing or correcting duplicates
+
+        Standardizing date and text formats
+
+        Addressing outliers (e.g., capping, transformation)
+
+Feature Engineering:
+
+    Describe any new features created to enhance model performance:
+
+        Ratios, time-based lags, rolling averages
+
+        Categorical encoding (e.g., one-hot, label)
+
+        Domain-specific aggregations or flags
+
+Final Dataset:
+
+    Summarize the result of data prep:
+
+        Number of rows and columns
+
+        File or table format (e.g., CSV, Parquet, SQL)
+
+        Ready-for-modeling status
+
+4. Modeling
+
+Algorithms Used:
+
+    List the machine learning/statistical models tested:
+
+        Decision Trees, Random Forest, XGBoost, LightGBM, SVM, Logistic Regression, Neural Networks, etc.
+
+    Justify choices based on data size, interpretability, speed, etc.
+
+Performance Metrics:
+
+    Specify which metrics were used to evaluate models:
+
+        Classification: Accuracy, Precision, Recall, F1, AUC
+
+        Regression: RMSE, MAE, R²
+
+        Clustering: Silhouette Score, Davies-Bouldin Index
+
+Hyperparameters:
+
+    Note what was tuned (e.g., learning rate, max depth, number of trees)
+
+    Describe tuning strategy (e.g., Grid Search, Random Search, Bayesian Optimization)
+
+5. Evaluation
+
+Model Performance:
+
+    Report how well the final model performed on unseen data (validation/test set).
+
+    Use visualizations (confusion matrix, ROC curve, residual plots) if helpful.
+
+Business Implications:
+
+    Connect the technical results to the business problem:
+
+        Will this model reduce fraud losses?
+
+        Will it better target customers for upselling?
+
+        Is the solution cost-effective?
+
+Recommendations:
+
+    Make a clear recommendation:
+
+        “Deploy the model” (Go)
+
+        “Model needs improvement in X area” (Improve and iterate)
+
+        “Not viable due to data constraints” (No-Go)
+
+6. Deployment
+
+Output Format:
+
+    Describe how results are delivered:
+
+        Standalone dashboard (e.g., Streamlit, Tableau)
+
+        Batch process (e.g., CSV exports)
+
+        API endpoint
+
+        Embedded in existing software
+
+Monitoring Plan:
+
+    Set up ongoing evaluation of performance:
+
+        Data drift detection
+
+        Regular metric reports
+
+        Retraining schedule
+
+Documentation:
+
+    Include:
+
+        Technical setup instructions
+
+        Known limitations or assumptions
+
+        Contact information for maintainers
+
+        Links to source code, models, and dashboards
