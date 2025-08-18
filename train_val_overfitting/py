@@ -1,0 +1,54 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from xgboost import XGBClassifier
+from lightgbm import LGBMClassifier
+from sklearn.metrics import accuracy_score
+
+# 1. Generate synthetic dataset
+X, y = make_classification(n_samples=3000, n_features=20, n_informative=15,
+                           n_redundant=5, n_classes=2, random_state=42)
+
+X_train, X_val, y_train, y_val = train_test_split(
+    X, y, test_size=0.3, random_state=42, stratify=y
+)
+
+# 2. Range of estimators
+n_estimators_range = [10, 50, 100, 200, 300]
+
+# 3. Define models
+def make_models(n_estimators):
+    return {
+        "Random Forest": RandomForestClassifier(n_estimators=n_estimators, random_state=42),
+        "XGBoost": XGBClassifier(n_estimators=n_estimators, learning_rate=0.1,
+                                 use_label_encoder=False, eval_metric="logloss", random_state=42),
+        "LightGBM": LGBMClassifier(n_estimators=n_estimators, learning_rate=0.1, random_state=42)
+    }
+
+# 4. Store results
+results = {name: {"train": [], "val": []} for name in ["Random Forest", "XGBoost", "LightGBM"]}
+
+for n in n_estimators_range:
+    models = make_models(n)
+    for name, model in models.items():
+        model.fit(X_train, y_train)
+        train_acc = accuracy_score(y_train, model.predict(X_train))
+        val_acc = accuracy_score(y_val, model.predict(X_val))
+        results[name]["train"].append(train_acc)
+        results[name]["val"].append(val_acc)
+
+# 5. Plot learning curves
+plt.figure(figsize=(10, 6))
+for name, res in results.items():
+    plt.plot(n_estimators_range, res["train"], marker="o", linestyle="--", label=f"{name} Train")
+    plt.plot(n_estimators_range, res["val"], marker="s", linestyle="-", label=f"{name} Validation")
+
+plt.xlabel("Number of Trees (n_estimators)")
+plt.ylabel("Accuracy")
+plt.title("Learning Curves: Train vs Validation Accuracy")
+plt.legend()
+plt.ylim(0.5, 1.05)
+plt.grid(True, linestyle="--", alpha=0.6)
+plt.show()
